@@ -23,14 +23,15 @@
         var app = angular.module("myApp", ["ngRoute"]);
         app.config(function($routeProvider) {
             $routeProvider
+
                 .when("/", {
-                    template : "<h1>Main</h1><p>główna strona</p>"
+                    templateUrl : 'pages/home.html',
                 })
                 .when("/patient", {
-                    template : "<h1>Pacjent</h1><p>Pacjent.</p>"
+                    templateUrl : 'pages/patient.html',
                 })
                 .when("/doctor", {
-                    template : "<h1>Lekarz</h1><p>lekarz.</p>"
+                    templateUrl : 'pages/doctor.html',
                 });
         });
     </script>
@@ -52,12 +53,12 @@
         <li class="nav-item active">
             <a class="nav-link" href="#!patient">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
-                <span>Przykładowa strona pacjenta</span></a>
+                <span>Strona pacjenta</span></a>
         </li>
         <li class="nav-item active">
             <a class="nav-link" href="#!doctor">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
-                <span>Przykładowa strona lekarza</span></a>
+                <span>Strona lekarza</span></a>
         </li>
     </ul>
 

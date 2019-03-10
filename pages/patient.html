@@ -1,0 +1,159 @@
+<script>
+    $(document).ready(function () {
+
+        $('#seaForm').submit(function () {
+
+            $('#response').html("<b>ładowanie odpowiedzi...</b>");
+            $.ajax({
+                type: 'POST',
+                url: 'api.php',
+                dataType: 'json',
+                data: "sql=select column_name from all_tab_columns where owner = 'SYSTEM' and table_name = '" + $('input[name=find_elements_alt]').val() + "' &json=1",
+                success: function (json) {
+                    $('#response').html(" <div class=\"alert alert-success\" role=\"alert\"> <strong>Uwaga!</strong> Poprawnie odczytano bazę danych.</div>");
+                    $('#dvTable').createTable(json);
+                },
+                error: function (xhr) {
+                    $('#response').html("<div class=\"alert alert-danger\" role='alert'><strong>Uwaga!</strong> Błąd odczytu bazy danych. </div>");
+                }
+            })
+            return false;
+
+        });
+
+        $('#execForm').submit(function () {
+
+            $('#response').html("<b>ładowanie odpowiedzi...</b>");
+            $.ajax({
+                type: 'POST',
+                url: 'api.php',
+                dataType: 'json',
+                data: "sql=DELETE FROM " + $('input[name=nazwa_tabeli]').val() + " WHERE " + $('input[name=find_elements]').val() + "&json=1",
+                success: function (json) {
+                    $('#response').html(" <div class=\"alert alert-success\" role=\"alert\"> <strong>Uwaga!</strong> Poprawnie odczytano bazę danych.</div>");
+                    $('#dvTable').createTable(json);
+                },
+                error: function (xhr) {
+                    $('#response').html("<div class=\"alert alert-danger\" role='alert'><strong>Uwaga!</strong> Błąd odczytu bazy danych. </div>");
+                }
+            })
+            return false;
+
+        });
+
+
+    });
+</script>
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Pacjent</h1>
+</div>
+<div class="row">
+
+    <!-- Content Column -->
+    <div class="col-lg-6 mb-4">
+
+        <!-- Project Card Example -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Zgłoszone nolegliwości</h6>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <table class="table table-bordered dataTable" id="dataTable" width="100%" cellspacing="0"
+                               role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+                            <thead>
+                            <tr role="row">
+                                <th class="sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1"
+                                    aria-label="Name: activate to sort column descending" style="width: 112px;"
+                                    aria-sort="ascending">Od
+                                </th>
+                                <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1"
+                                    aria-label="Position: activate to sort column ascending" style="width: 177px;">Do
+                                </th>
+                                <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1"
+                                    aria-label="Office: activate to sort column ascending" style="width: 79px;">rodzaj
+                                    dolegliwości
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr role="row" class="odd">
+                                <td class="">01-01-2019</td>
+                                <td class="">02-01-2019</td>
+                                <td>Choroba 1</td>
+
+                            </tr>
+                            <tr role="row" class="even">
+                                <td class="">01-01-2019</td>
+                                <td class="">02-01-2019</td>
+                                <td>Choroba 1</td>
+
+                            </tr>
+                            <tr role="row" class="odd">
+                                <td class="">01-01-2019</td>
+                                <td class="">02-01-2019</td>
+                                <td>Choroba 1</td>
+
+                            </tr>
+                            <tr role="row" class="even">
+                                <td class="">01-01-2019</td>
+                                <td class="">02-01-2019</td>
+                                <td>Choroba 1</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6 mb-4">
+
+        <!-- Project Card Example -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Dawki leku</h6>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <table class="table table-bordered dataTable" id="dataTable1" width="100%" cellspacing="0"
+                               role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+                            <thead>
+                            <tr role="row">
+                                <th class="sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1"
+                                    aria-label="Name: activate to sort column descending" style="width: 112px;"
+                                    aria-sort="ascending">Data
+                                </th>
+                                <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1"
+                                    aria-label="Position: activate to sort column ascending" style="width: 177px;">Dawka leku
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr role="row" class="odd">
+                                <td class="">01-01-2019</td>
+                                <td class="">2 tabletki</td>
+                            </tr>
+                            <tr role="row" class="odd">
+                                <td class="">01-01-2019</td>
+                                <td class="">2 tabletki</td>
+                            </tr>
+                            <tr role="row" class="odd">
+                                <td class="">01-01-2019</td>
+                                <td class="">2 tabletki</td>
+                            </tr>
+                            <tr role="row" class="odd">
+                                <td class="">01-01-2019</td>
+                                <td class="">2 tabletki</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -28,7 +28,7 @@
                 type: 'POST',
                 url: 'api.php',
                 dataType: 'json',
-                data:"sql=UPDATE "+$('input[name=nazwa_tabeli]').val()+" SET "+$('input[name=show_elements]').val()+" WHERE "+$('input[name=find_elements]').val()+"&json=1",
+                data:"sql=DELETE FROM "+$('input[name=nazwa_tabeli]').val()+ " WHERE "+$('input[name=find_elements]').val()+"&json=1",
                 success: function (json) {
                     $('#response').html(" <div class=\"alert alert-success\" role=\"alert\"> <strong>Uwaga!</strong> Poprawnie odczytano bazę danych.</div>");
                     $('#dvTable').createTable(json);
@@ -41,37 +41,9 @@
 
         });
 
+
     });
 </script>
-<div class="container-fluid">
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item">
-            <a href="#/">Baza Danych</a>
-        </li>
-        <li class="breadcrumb-item active">{{ message }}</li>
-    </ol>
-
-    <form id="seaForm">
-        <div class="form-group">
-            <div><input  class="form-control" type="text" name="find_elements_alt" placeholder="Podaj nazwę tabeli do zwrócenia nazw kolumn" /></div>
-        </div>
-        <div><input type="submit" class="btn btn-primary" value="Wykonaj zapytanie" /></div>
-    </form>
-    <hr class="aah">
-    <form id="execForm">
-        <div class="form-group">
-            <div><input  class="form-control" type="text" name="nazwa_tabeli" placeholder="Podaj nazwę tabeli" /></div>
-            <div><input  class="form-control" type="text" name="show_elements" placeholder="Podaj elementy do aktualizacji" /></div>
-            <div><input  class="form-control" type="text" name="find_elements" placeholder="Podaj warunki aktualizacji" /></div>
-        </div>
-        <div><input type="submit" class="btn btn-primary" value="Wykonaj zapytanie" /></div>
-    </form>
-    <hr class="aah">
-    <div class="container-fluid">
-        <div id="response"></div>
-        <div class="table-responsive">
-            <div id="dvTable"></div>
-        </div>
-    </div>
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">lekarz</h1>
 </div>
-
