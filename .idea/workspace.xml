@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3aff6e67-5638-4499-8050-8d18713b7495" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/Insertintotable.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/createfunction.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/createprocedures.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/createtable.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/deletefromtable.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/droptable.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/executefunction.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/executeprocedures.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/executesql.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/selectfromtable.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/sequences.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/updatefromtable.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/viewselect.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/patient.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/patient.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -60,8 +45,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/patient.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="820">
-              <caret line="150" column="33" selection-start-line="150" selection-start-column="33" selection-end-line="150" selection-end-column="33" />
+            <state relative-caret-position="521">
+              <caret line="74" column="113" selection-start-line="74" selection-start-column="113" selection-end-line="74" selection-end-column="113" />
               <folding>
                 <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
@@ -231,7 +216,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6142000" />
+    <option name="totallyTimeSpent" value="6199000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
@@ -378,8 +363,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/patient.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="820">
-          <caret line="150" column="33" selection-start-line="150" selection-start-column="33" selection-end-line="150" selection-end-column="33" />
+        <state relative-caret-position="521">
+          <caret line="74" column="113" selection-start-line="74" selection-start-column="113" selection-end-line="74" selection-end-column="113" />
           <folding>
             <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
