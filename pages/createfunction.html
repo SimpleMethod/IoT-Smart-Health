@@ -1,0 +1,43 @@
+<script>
+    $(document).ready(function(){
+        $('#userForm').submit(function(){
+            $('#response').html("<b>ładowanie odpowiedzi...</b>");
+            $.ajax({
+                type: 'POST',
+                url: 'api.php',
+                dataType: 'json',
+                data:'sql='+$('input[name=sql]').val()+'&json=2',
+                success: function (json) {
+                  //  $('#response').html(" <div class=\"alert alert-success\" role=\"alert\"> <strong>Uwaga!</strong> Poprawnie odczytano bazę danych.</div>");
+                 //   $('#dvTable').createTable(json);
+                },
+                error: function (xhr) {
+                     $('#response').html(" <div class=\"alert alert-success\" role=\"alert\"> <strong>Uwaga!</strong> Poprawnie odczytano bazę danych.</div>");
+                }
+            })
+            return false;
+
+        });
+    });
+</script>
+<div class="container-fluid">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="#/">Baza danych</a>
+        </li>
+        <li class="breadcrumb-item active">{{ message }}</li>
+    </ol>
+    <form id="userForm">
+        <div class="form-group">
+            <div><input  class="form-control" type="text" name="sql" placeholder="Prosze podać kod SQL do wykonania" /></div>
+        </div>
+        <div><input type="submit" class="btn btn-primary" value="Wykonaj kod SQL" /></div>
+    </form>
+    <hr class="aah">
+    <div class="container-fluid">
+        <div id="response"></div>
+        <div class="table-responsive">
+            <div id="dvTable"></div>
+        </div>
+    </div>
+</div>

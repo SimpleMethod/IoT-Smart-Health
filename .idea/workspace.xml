@@ -2,7 +2,952 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3aff6e67-5638-4499-8050-8d18713b7495" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/avatar-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/avatar-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/avatar-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/avatar-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/avatar-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/bitbucket.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/card-img-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/card-img-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/card-img-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/card-img.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/down-arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/drag-indicator.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/dribbble.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/dropbox.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/eco-product-img-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/eco-product-img-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/eco-product-img-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/eco-product-img-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/eco-slider-img-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/eco-slider-img-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/eco-slider-img-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/error-img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/github.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/loader.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/mail_chimp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/product-pic-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/product-pic-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/product-pic-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/product-pic.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/slack.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/switch.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/libs/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/libs/js/dashboard-ecommerce.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/libs/js/dashboard-finance.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/libs/js/dashboard-influencer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/libs/js/dashboard-sales.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/libs/js/gmaps.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/libs/js/google_map.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/libs/js/jvectormap.custom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/libs/js/main-js.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/angular/angular-loader.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/angular/angular-messages.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/angular/angular.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/bootstrap-colorpicker/@claviska/jquery-minicolors/jquery.minicolors.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/bootstrap-colorpicker/@claviska/jquery-minicolors/jquery.minicolors.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/bootstrap-colorpicker/@claviska/jquery-minicolors/jquery.minicolors.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/bootstrap-colorpicker/jquery-asColor/dist/jquery-asColor.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/bootstrap-colorpicker/jquery-asColorPicker/dist/jquery-asColorPicker.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/bootstrap-colorpicker/jquery-asGradient/dist/jquery-asGradient.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/bootstrap-select/css/bootstrap-select.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/bootstrap-select/js/bootstrap-select.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/bootstrap/css/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/bootstrap/css/bootstrap-grid.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/bootstrap/css/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/bootstrap/css/bootstrap-grid.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/bootstrap/css/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/bootstrap/css/bootstrap-reboot.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/bootstrap/css/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/bootstrap/css/bootstrap-reboot.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/bootstrap/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/bootstrap/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/bootstrap/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/bootstrap/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/bootstrap/js/bootstrap.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/bootstrap/js/bootstrap.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/bootstrap/js/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/bootstrap/js/bootstrap.bundle.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/bootstrap/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/bootstrap/js/bootstrap.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/bootstrap/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/bootstrap/js/bootstrap.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/charts/c3charts/C3chartjs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/charts/c3charts/c3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/charts/c3charts/c3.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/charts/c3charts/d3-5.4.0.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/charts/chartist-bundle/Chartistjs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/charts/chartist-bundle/chartist-plugin-threshold.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/charts/chartist-bundle/chartist.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/charts/chartist-bundle/chartist.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/charts/charts-bundle/Chart.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/charts/charts-bundle/chartjs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/charts/morris-bundle/Morrisjs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/charts/morris-bundle/morris.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/charts/morris-bundle/morris.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/charts/morris-bundle/morrisjs.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/charts/morris-bundle/raphael.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/charts/sparkline/jquery.sparkline.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/charts/sparkline/spark-js.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/cropper/dist/cropper-int.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/cropper/dist/cropper.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/cropper/dist/cropper.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/custom-js/jquery.multi-select.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/datatables/css/buttons.bootstrap4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/datatables/css/dataTables.bootstrap4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/datatables/css/fixedHeader.bootstrap4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/datatables/css/select.bootstrap4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/datatables/js/buttons.bootstrap4.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/datatables/js/data-table.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/datatables/js/dataTables.bootstrap4.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/datepicker/datepicker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/datepicker/moment.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/datepicker/tempusdominus-bootstrap-4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/datepicker/tempusdominus-bootstrap-4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/daterangepicker/daterangepicker.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/dropzone/dropzone.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/circular-std/CircularStd-Black.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/circular-std/CircularStd-BlackItalic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/circular-std/CircularStd-Bold.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/circular-std/CircularStd-BoldItalic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/circular-std/CircularStd-Book.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/circular-std/CircularStd-BookItalic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/circular-std/CircularStd-Medium.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/circular-std/CircularStd-MediumItalic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/circular-std/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flag-icon.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/ad.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/ae.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/af.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/ag.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/ai.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/al.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/am.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/ao.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/aq.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/ar.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/as.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/at.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/au.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/aw.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/ax.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/az.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/ba.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/bb.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/bd.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/be.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/bf.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/bg.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/bh.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/bi.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/bj.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/bl.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/bm.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/bn.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/bo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/bq.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/br.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/bs.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/bt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/bv.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/bw.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/by.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/bz.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/ca.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/cc.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/cd.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/cf.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/cg.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/ch.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/ci.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/ck.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/cl.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/cm.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/cn.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/co.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/cr.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/cu.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/cv.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/cw.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/cx.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/cy.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/cz.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/de.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/dj.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/dk.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/dm.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/do.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/dz.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/ec.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/ee.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/eg.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/eh.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/er.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/es.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/et.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/fi.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/fj.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/fk.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/fm.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/fo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/fr.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/ga.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/gb.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/gd.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/ge.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/gf.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/gg.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/gh.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/gi.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/gl.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/gm.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/gn.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/gp.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/gq.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/gr.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/gs.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/gt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/gu.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/gw.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/gy.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/hk.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/hm.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/hn.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/hr.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/ht.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/hu.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/id.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/ie.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/il.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/im.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/in.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/io.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/iq.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/ir.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/is.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/it.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/je.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/jm.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/jo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/jp.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/ke.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/kg.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/kh.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/ki.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/km.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/kn.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/kp.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/kr.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/kw.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/ky.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/kz.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/la.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/lb.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/lc.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/li.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/lk.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/lr.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/ls.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/lt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/lu.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/lv.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/ly.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/ma.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/mc.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/md.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/me.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/mf.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/mg.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/mh.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/mk.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/ml.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/mm.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/mn.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/mo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/mp.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/mq.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/mr.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/ms.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/mt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/mu.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/mv.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/mw.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/mx.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/my.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/mz.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/na.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/nc.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/ne.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/nf.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/ng.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/ni.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/nl.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/no.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/np.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/nr.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/nu.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/nz.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/om.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/pa.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/pe.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/pf.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/pg.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/ph.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/pk.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/pl.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/pm.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/pn.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/pr.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/ps.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/pt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/pw.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/py.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/qa.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/re.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/ro.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/rs.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/ru.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/rw.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/sa.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/sb.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/sc.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/sd.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/se.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/sg.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/sh.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/si.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/sj.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/sk.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/sl.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/sm.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/sn.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/so.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/sr.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/ss.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/st.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/sv.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/sx.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/sy.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/sz.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/tc.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/td.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/tf.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/tg.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/th.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/tj.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/tk.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/tl.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/tm.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/tn.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/to.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/tr.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/tt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/tv.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/tw.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/tz.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/ua.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/ug.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/um.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/us.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/uy.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/uz.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/va.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/vc.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/ve.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/vg.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/vi.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/vn.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/vu.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/wf.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/ws.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/ye.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/yt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/za.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/zm.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/flag-icon-css/flags/zw.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/fontawesome/css/fontawesome-all.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/fontawesome/webfonts/fa-brands-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/fontawesome/webfonts/fa-brands-400.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/fontawesome/webfonts/fa-brands-400.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/fontawesome/webfonts/fa-brands-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/fontawesome/webfonts/fa-brands-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/fontawesome/webfonts/fa-brands-400d41d.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/fontawesome/webfonts/fa-regular-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/fontawesome/webfonts/fa-regular-400.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/fontawesome/webfonts/fa-regular-400.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/fontawesome/webfonts/fa-regular-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/fontawesome/webfonts/fa-regular-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/fontawesome/webfonts/fa-regular-400d41d.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/fontawesome/webfonts/fa-solid-900.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/fontawesome/webfonts/fa-solid-900.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/fontawesome/webfonts/fa-solid-900.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/fontawesome/webfonts/fa-solid-900.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/fontawesome/webfonts/fa-solid-900.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/fontawesome/webfonts/fa-solid-900d41d.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/material-design-iconic-font/fonts/materialdesignicons-webfontd41d.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/material-design-iconic-font/fonts/materialdesignicons-webfontdc99.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/material-design-iconic-font/fonts/materialdesignicons-webfontdc99.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/material-design-iconic-font/fonts/materialdesignicons-webfontdc99.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/material-design-iconic-font/fonts/materialdesignicons-webfontdc99.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/material-design-iconic-font/fonts/materialdesignicons-webfontdc99.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/simple-line-icons/css/simple-line-icons.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/simple-line-icons/fonts/Simple-Line-Icons4c82.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/simple-line-icons/fonts/Simple-Line-Icons4c82.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/simple-line-icons/fonts/Simple-Line-Icons4c82.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/simple-line-icons/fonts/Simple-Line-Icons4c82.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/simple-line-icons/fonts/Simple-Line-Icons4c82.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/simple-line-icons/fonts/Simple-Line-Iconsd41d.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/themify-icons/fonts/themify.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/themify-icons/fonts/themify.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/themify-icons/fonts/themify9f24.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/themify-icons/fonts/themify9f24.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/themify-icons/fonts/themifyd41d.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/themify-icons/themify-icons.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/weather-icons/css/weather-icons.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/fonts/weather-icons/fonts/weathericons-regular-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/full-calendar/css/fullcalendar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/full-calendar/css/fullcalendar.print.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/full-calendar/js/calendar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/full-calendar/js/fullcalendar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/full-calendar/js/jquery-ui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/full-calendar/js/moment.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/gauge/gauge.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/gauge/gauge.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/css/annotations/popup.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/css/annotations/popup.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/css/highcharts.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/css/highcharts.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/css/stocktools/gui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/css/stocktools/gui.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/css/themes/dark-unica.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/css/themes/dark-unica.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/css/themes/grid-light.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/css/themes/grid-light.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/css/themes/sand-signika.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/css/themes/sand-signika.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/annotations/ControlPoint.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/annotations/MockPoint.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/annotations/annotations.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/annotations/controllable/ControllableCircle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/annotations/controllable/ControllableImage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/annotations/controllable/ControllableLabel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/annotations/controllable/ControllablePath.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/annotations/controllable/ControllableRect.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/annotations/controllable/controllableMixin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/annotations/controllable/markerMixin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/annotations/eventEmitterMixin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/annotations/navigationBindings.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/annotations/popup.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/annotations/types/CrookedLine.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/annotations/types/ElliottWave.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/annotations/types/Fibonacci.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/annotations/types/InfinityLine.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/annotations/types/Measure.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/annotations/types/Pitchfork.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/annotations/types/Tunnel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/annotations/types/VerticalLine.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/error-messages.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/error.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/highcharts-3d.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/highcharts-more.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/highcharts.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/accessibility.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/annotations-advanced.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/annotations.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/arrow-symbols.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/boost-canvas.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/boost.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/broken-axis.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/bullet.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/current-date-indicator.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/cylinder.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/data.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/datagrouping.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/debugger.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/dependency-wheel.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/drag-panes.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/draggable-points.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/drilldown.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/export-data.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/exporting.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/full-screen.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/funnel.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/gantt.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/grid-axis.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/heatmap.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/histogram-bellcurve.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/item-series.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/networkgraph.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/no-data-to-display.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/offline-exporting.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/oldie-polyfills.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/oldie.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/overlapping-datalabels.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/parallel-coordinates.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/pareto.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/pathfinder.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/pattern-fill.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/price-indicator.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/sankey.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/series-label.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/solid-gauge.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/sonification.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/static-scale.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/stock-tools.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/stock.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/streamgraph.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/sunburst.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/tilemap.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/timeline.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/treegrid.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/treemap.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/variable-pie.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/variwide.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/vector.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/venn.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/windbarb.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/wordcloud.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/modules/xrange.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/themes/avocado.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/themes/avocado.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/themes/dark-blue.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/themes/dark-green.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/themes/dark-unica.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/themes/gray.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/themes/grid-light.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/themes/grid.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/themes/sand-signika.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/themes/skies.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/themes/sunset.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/masters/themes/sunset.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/mixins/ajax.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/mixins/centered-series.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/mixins/derived-series.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/mixins/download-url.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/mixins/draw-point.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/mixins/geometry-circles.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/mixins/geometry.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/mixins/indicator-required.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/mixins/multipe-lines.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/mixins/navigation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/mixins/nodes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/mixins/on-series.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/mixins/polygon.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/mixins/reduce-array.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/mixins/tree-series.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/a11y-i18n.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/annotations-legacy.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/bellcurve.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/boost-canvas.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/boost.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/broken-axis.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/bullet.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/cylinder.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/data.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/debugger.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/dependency-wheel.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/drag-panes.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/draggable-points.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/drilldown.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/export-data.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/exporting.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/full-screen.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/funnel.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/histogram.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/item-series.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/keyboard-navigation.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/networkgraph/QuadTree.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/networkgraph/layouts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/networkgraph/networkgraph.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/no-data-to-display.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/offline-exporting.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/oldie-polyfills.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/oldie.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/overlapping-datalabels.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/parallel-coordinates.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/pareto.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/pattern-fill.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/price-indicator.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/sankey.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/screen-reader.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/series-label.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/solid-gauge.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/sonification/Earcon.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/sonification/Instrument.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/sonification/Timeline.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/sonification/chartSonify.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/sonification/instrumentDefinitions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/sonification/musicalFrequencies.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/sonification/pointSonify.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/sonification/sonification.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/sonification/utilities.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/static-scale.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/stock-tools-bindings.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/stock-tools-gui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/streamgraph.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/sunburst.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/tilemap.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/timeline.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/treemap.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/variable-pie.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/variwide.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/vector.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/venn.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/windbarb.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/wordcloud.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/modules/xrange.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts-3d/Axis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts-3d/Chart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts-3d/Column.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts-3d/Math.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts-3d/Pie.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts-3d/SVGRenderer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts-3d/Scatter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts-3d/Series.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts-3d/VMLRenderer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts-gantt/ArrowSymbols.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts-gantt/CurrentDateIndicator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts-gantt/GanttChart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts-gantt/GanttSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts-gantt/GridAxis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts-gantt/Pathfinder.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts-gantt/PathfinderAlgorithms.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts-gantt/Tree.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts-gantt/TreeGrid.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts-map/ColorAxis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts-map/ColorSeriesMixin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts-map/GeoJSON.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts-map/HeatmapSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts-map/Map.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts-map/MapAxis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts-map/MapBubbleSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts-map/MapLineSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts-map/MapNavigation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts-map/MapPointSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts-map/MapPointer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts-map/MapSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts-more/AreaRangeSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts-more/AreaSplineRangeSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts-more/BoxPlotSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts-more/BubbleLegend.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts-more/BubbleSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts-more/ColumnPyramidSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts-more/ColumnRangeSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts-more/ErrorBarSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts-more/GaugeSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts-more/PackedBubbleSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts-more/Pane.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts-more/Polar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts-more/PolygonSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts-more/RadialAxis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts-more/WaterfallSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts/AreaSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts/AreaSplineSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts/Axis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts/BarSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts/CandlestickSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts/Chart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts/Color.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts/ColumnSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts/DataGrouping.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts/DataLabels.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts/DateTimeAxis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts/Dynamics.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts/FlagsSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts/Globals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts/Html.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts/Interaction.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts/Legend.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts/LogarithmicAxis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts/MSPointer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts/Navigator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts/OHLCSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts/Options.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts/OrdinalAxis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts/PieSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts/PlotBandSeries.experimental.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts/PlotLineOrBand.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts/Point.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts/Pointer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts/RangeSelector.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts/Responsive.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts/ScatterSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts/ScrollablePlotArea.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts/Scrollbar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts/Series.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts/SplineSeries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts/Stacking.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts/StockChart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts/SvgRenderer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts/Tick.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts/Time.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts/Tooltip.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts/TouchPointer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/parts/Utilities.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/themes/avocado.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/themes/dark-blue.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/themes/dark-green.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/themes/dark-unica.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/themes/gray.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/themes/grid-light.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/themes/grid.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/themes/sand-signika.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/themes/skies.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/es-modules/themes/sunset.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/highcharts-3d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/highcharts-3d.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/highcharts-3d.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/highcharts-more.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/highcharts-more.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/highcharts-more.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/highcharts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/highcharts.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/highcharts.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/lib/canvg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/lib/canvg.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/lib/jspdf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/lib/jspdf.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/lib/rgbcolor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/lib/rgbcolor.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/lib/svg2pdf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/lib/svg2pdf.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/accessibility.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/accessibility.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/accessibility.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/annotations-advanced.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/annotations-advanced.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/annotations-advanced.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/annotations.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/annotations.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/annotations.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/arrow-symbols.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/arrow-symbols.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/arrow-symbols.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/boost-canvas.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/boost-canvas.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/boost-canvas.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/boost.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/boost.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/boost.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/broken-axis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/broken-axis.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/broken-axis.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/bullet.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/bullet.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/bullet.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/current-date-indicator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/current-date-indicator.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/current-date-indicator.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/cylinder.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/cylinder.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/cylinder.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/data.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/data.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/datagrouping.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/datagrouping.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/datagrouping.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/debugger.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/debugger.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/debugger.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/dependency-wheel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/dependency-wheel.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/dependency-wheel.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/drag-panes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/drag-panes.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/drag-panes.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/draggable-points.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/draggable-points.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/draggable-points.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/drilldown.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/drilldown.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/drilldown.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/export-data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/export-data.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/export-data.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/exporting.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/exporting.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/exporting.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/full-screen.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/full-screen.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/full-screen.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/funnel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/funnel.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/funnel.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/gantt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/gantt.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/gantt.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/grid-axis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/grid-axis.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/grid-axis.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/heatmap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/heatmap.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/heatmap.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/histogram-bellcurve.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/histogram-bellcurve.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/histogram-bellcurve.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/item-series.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/item-series.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/item-series.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/networkgraph.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/networkgraph.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/networkgraph.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/no-data-to-display.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/no-data-to-display.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/no-data-to-display.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/offline-exporting.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/offline-exporting.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/offline-exporting.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/oldie-polyfills.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/oldie-polyfills.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/oldie-polyfills.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/oldie.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/oldie.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/oldie.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/overlapping-datalabels.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/overlapping-datalabels.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/overlapping-datalabels.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/parallel-coordinates.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/parallel-coordinates.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/parallel-coordinates.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/pareto.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/pareto.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/pareto.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/pathfinder.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/pathfinder.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/pathfinder.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/pattern-fill.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/pattern-fill.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/pattern-fill.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/price-indicator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/price-indicator.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/price-indicator.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/sankey.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/sankey.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/sankey.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/series-label.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/series-label.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/series-label.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/solid-gauge.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/solid-gauge.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/solid-gauge.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/sonification.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/sonification.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/sonification.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/static-scale.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/static-scale.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/static-scale.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/stock-tools.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/stock-tools.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/stock-tools.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/stock.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/stock.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/stock.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/streamgraph.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/streamgraph.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/streamgraph.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/sunburst.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/sunburst.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/sunburst.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/tilemap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/tilemap.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/tilemap.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/timeline.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/timeline.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/timeline.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/treegrid.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/treegrid.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/treegrid.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/treemap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/treemap.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/treemap.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/variable-pie.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/variable-pie.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/variable-pie.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/variwide.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/variwide.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/variwide.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/vector.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/vector.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/vector.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/venn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/venn.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/venn.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/windbarb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/windbarb.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/windbarb.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/wordcloud.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/wordcloud.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/wordcloud.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/xrange.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/xrange.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/modules/xrange.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/themes/avocado.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/themes/avocado.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/themes/avocado.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/themes/dark-blue.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/themes/dark-blue.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/themes/dark-blue.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/themes/dark-green.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/themes/dark-green.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/themes/dark-green.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/themes/dark-unica.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/themes/dark-unica.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/themes/dark-unica.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/themes/gray.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/themes/gray.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/themes/gray.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/themes/grid-light.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/themes/grid-light.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/themes/grid-light.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/themes/grid.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/themes/grid.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/themes/grid.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/themes/sand-signika.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/themes/sand-signika.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/themes/sand-signika.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/themes/skies.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/themes/skies.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/themes/skies.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/themes/sunset.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/themes/sunset.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/highcharts/themes/sunset.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/inputmask/css/inputmask.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/inputmask/js/jquery.inputmask.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/jquery/jquery-3.3.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/jvectormap/jquery-jvectormap-2.0.2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/jvectormap/jquery-jvectormap-2.0.2.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/jvectormap/jquery-jvectormap-au-mill.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/jvectormap/jquery-jvectormap-in-mill.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/jvectormap/jquery-jvectormap-uk-mill-en.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/jvectormap/jquery-jvectormap-us-aea-en.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/jvectormap/jquery-jvectormap-world-mill-en.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/multi-select/css/multi-select.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/multi-select/js/jquery.multi-select.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/parsley/parsley.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/select2/css/select2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/select2/js/select2.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/shortable-nestable/Sortable.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/shortable-nestable/jquery.nestable.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/shortable-nestable/sort-nest.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/slimscroll/jquery.slimscroll.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/summernote/css/summernote-bs4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/summernote/editor-fonts/summernote4c4d.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/summernote/editor-fonts/summernote4c4d.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/summernote/editor-fonts/summernote4c4d.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/summernote/editor-fonts/summernoted41d.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/summernote/js/summernote-bs4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/timeline/img/cd-icon-location.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/timeline/img/cd-icon-movie.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/timeline/img/cd-icon-picture.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/timeline/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vendor/vector-map/jqvmap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -15,11 +960,90 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2461">
+              <caret line="107" column="42" selection-start-line="107" selection-start-column="42" selection-end-line="107" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+            <state relative-caret-position="391">
+              <caret line="71" column="98" selection-start-line="71" selection-start-column="98" selection-end-line="71" selection-end-column="98" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Temp/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="713">
+              <caret line="31" column="38" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/css/sb-admin.css">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/angular.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/angular-animate.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-4554" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/bootstrap.bundle.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/bootstrap.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/jquery-3.3.1.min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/ui-bootstrap-tpls-2.5.0.min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -29,9 +1053,17 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="580" />
-    <option name="y" value="200" />
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/pre/css/sb-admin.css" />
+        <option value="$PROJECT_DIR$/index.html" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="331" />
+    <option name="y" value="-22" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
@@ -47,6 +1079,23 @@
             <path>
               <item name="IoT-Smart-Health" type="b2602c69:ProjectViewProjectNode" />
               <item name="IoT-Smart-Health" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IoT-Smart-Health" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IoT-Smart-Health" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IoT-Smart-Health" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IoT-Smart-Health" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IoT-Smart-Health" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IoT-Smart-Health" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -85,19 +1134,15 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65000" />
+    <option name="totallyTimeSpent" value="4479000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="580" y="200" width="1400" height="1000" extended-state="0" />
+    <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2496329" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13396375" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -105,6 +1150,10 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -114,10 +1163,105 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/pre/css/fontawesome.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-58259" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pre/css/fontawesome-all.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-58949" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pre/css/sb-admin.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1518" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/Insertintotable.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-713" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/angular.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/angular-animate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4554" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/bootstrap.bundle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/jquery-3.3.1.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/ui-bootstrap-tpls-2.5.0.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/sb-admin.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.ini">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2461">
+          <caret line="107" column="42" selection-start-line="107" selection-start-column="42" selection-end-line="107" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="713">
+          <caret line="31" column="38" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+        <state relative-caret-position="391">
+          <caret line="71" column="98" selection-start-line="71" selection-start-column="98" selection-end-line="71" selection-end-column="98" />
         </state>
       </provider>
     </entry>

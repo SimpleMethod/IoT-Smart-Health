@@ -1,0 +1,88 @@
+<script>
+    $(document).ready(function(){
+        $('#userForm').submit(function(){
+
+            $('#response').html("<b>ładowanie odpowiedzi...</b>");
+
+            $.ajax({
+                type: 'POST',
+                url: 'api.php',
+                dataType: 'json',
+                data:'sql=select * from user_objects where object_type = \'SEQUENCE\'&json=1',
+                success: function (json) {
+                    $('#response').html(" <div class=\"alert alert-success\" role=\"alert\"> <strong>Uwaga!</strong> Poprawnie odczytano bazę danych.</div>");
+                    $('#dvTable').createTable(json);
+                },
+                error: function (xhr) {
+                    $('#response').html("<div class=\"alert alert-danger\" role='alert'><strong>Uwaga!</strong> Błąd odczytu bazy danych. </div>");
+                }
+            })
+            return false;
+
+
+
+        });
+
+        $('#execForm').submit(function(){
+            $("#myInput").val(function() {
+                return this.value + number;
+            });
+
+            $('#response').html("<b>ładowanie odpowiedzi...</b>");
+
+            $.ajax({
+                type: 'POST',
+                url: 'api.php',
+                dataType: 'json',
+                data:'sql=CREATE SEQUENCE '+$('input[name=nazwa_sekwencji]').val()+' START WITH '+$('input[name=max_value]').val()+' INCREMENT BY '+$('input[name=increment_by]').val()+ ' MINVALUE '+$('input[name=min_value]').val()+' MAXVALUE '+$('input[name=max_value]').val()+' '+$('input[name=other_value]').val()+'&json=1',
+
+                success: function (json) {
+                    $('#response').html(" <div class=\"alert alert-success\" role=\"alert\"> <strong>Uwaga!</strong> Poprawnie odczytano bazę danych.</div>");
+                    $('#dvTable').createTable(json);
+                },
+                error: function (xhr) {
+                    $('#response').html("<div class=\"alert alert-danger\" role='alert'><strong>Uwaga!</strong> Błąd odczytu bazy danych. </div>");
+                }
+            })
+            return false;
+
+        });
+
+
+    });
+</script>
+<div class="container-fluid">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="#/">Baza Danych</a>
+        </li>
+        <li class="breadcrumb-item active">{{ message }}</li>
+    </ol>
+    <form id="userForm">
+        <div class="form-group">
+            <div><input  class="form-control" type="hidden" name="sql"value="select * from user_objects where object_type = 'SEQUENCE'" /></div>
+            <div><input type="hidden" name="json" placeholder="1" value="1" /></div>
+        </div>
+        <div><input type="submit" class="btn btn-primary" value="Wyświetl dostępne sekwencje" /></div>
+    </form>
+    <hr class="aah">
+    <form id="execForm">
+        <div class="form-group">
+            <div><input  class="form-control" type="text" name="nazwa_sekwencji" placeholder="Podaj nazwę sekwencji" /></div>
+            <div><input  class="form-control" type="text" name="start_with" placeholder="Podaj pierwszą liczbę naturalną, od której zaczyna się generowanie numerów" /></div>
+            <div><input  class="form-control" type="text" name="increment_by" placeholder="Podaj wartość określająca krok" /></div>
+            <div><input  class="form-control" type="text" name="min_value" placeholder="Podaj wartość minimalną" /></div>
+            <div><input  class="form-control" type="text" name="max_value" placeholder="Podaj wartosc maksymalną" /></div>
+            <div><input  class="form-control" type="text" name="other_value" placeholder="Podaj dodatkowe parametry (CYCLE,CACHE,ORDER BY)" /></div>
+        </div>
+        <div><input type="submit" class="btn btn-primary" value="Dodaj sekwencję" /></div>
+    </form>
+    <hr class="aah">
+    <div class="container-fluid">
+        <div id="response"></div>
+        <div class="table-responsive">
+            <div id="dvTable"></div>
+        </div>
+    </div>
+</div>
+
