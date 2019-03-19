@@ -1,0 +1,113 @@
+----------------------------------
+ArduinoJson
+----------------------------------
+[env:nodemcuv2]
+platform = espressif8266
+board = nodemcuv2
+framework = arduino
+
+monitor_speed = 115200
+monitor_port = /dev/ttyUSB0
+
+lib_deps = MQTT,ArduinoJson
+
+
+
+--------------------------------
+#include <ArduinoJson.h>
+
+
+// Parse JSON
+StaticJsonDocument<200> object;
+deserializeJson(object, json);
+Serial.println((const char *) object["sensor"]);
+Serial.println((float) object["value"]);
+Serial.println((long) object["time"]);
+
+
+
+// Generate JSON
+StaticJsonDocument<200> object;
+object["sensor"] = "temp";
+object["value"] = 5.26;
+object["time"] = 1351824120;
+ 
+String json;
+serializeJson(object, json);
+Serial.println(json);
+
+
+
+
+---------------------------------
+Interrupt
+---------------------------------
+
+void onButtonChange()
+{
+  Serial.println("Button: " + String(digitalRead(5)));
+}
+ 
+void setup()
+{
+  attachInterrupt(digitalPinToInterrupt(5), onButtonChange, CHANGE);
+}
+
+void loop()
+{
+  
+}
+
+
+------------------------------------------------------------------------
+#include <Arduino.h>
+#include <ESP8266WiFi.h>
+#include <MQTT.h>
+ 
+WiFiClient net;
+MQTTClient mqtt;
+ 
+void messageReceived(String &topic, String &message) {
+  Serial.println("Incoming: " + topic + " - " + message);
+}
+ 
+void setup() {
+    // ... wifi config
+
+  mqtt.begin("192.168.1.102", net);
+  
+  while (!mqtt.connect("SmartTV")) {
+    Serial.print("^");
+    delay(1000);
+  }
+ 
+  mqtt.onMessage(messageReceived);
+  mqtt.subscribe("topic");
+}
+ 
+void loop() {
+  mqtt.loop();
+  mqtt.publish("topic", String(analogRead(A0)));
+  delay(1000);
+}
+
+--------------------------------------------------------------------------------
+var mqtt = new Paho.MQTT.Client("192.168.1.102", 1884, "IotWebClient");
+ 
+mqtt.onMessageArrived = function(data) {
+  console.log(data.destinationName); // topic
+  console.log(data.payloadString); // message
+}
+ 
+mqtt.connect({ 
+  onSuccess: function () {
+    mqtt.subscribe("topic");
+  }
+});
+ 
+function sendMessage(message) {
+    data = new Paho.MQTT.Message(message);
+    data.destinationName = "topic";
+    mqtt.send(data);
+};
+

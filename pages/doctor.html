@@ -135,7 +135,7 @@
 
 </script>
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Strona lekarza</h1>
+    <h1 class="h3 mb-0 text-gray-800">{{doctor_page_title}}</h1>
 </div>
 <div class="row">
 
@@ -145,16 +145,16 @@
         <!-- Project Card Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Informacja o pacjencie</h6>
+                <h6 class="m-0 font-weight-bold text-primary">{{doctor_page_information_about_patient}}</h6>
             </div>
             <div class="card-body">
-                <b>IP:</b><p>192.168.2.137</p>
-                <b>Pacjent:</b><p>Piotr Piasecki</p>
-                <h4 class="small font-weight-bold">Temperatura ciała <span class="float-right">20%</span></h4>
+                <b>{{doctor_page_ip_address}}</b><p>192.168.2.137</p>
+                <b>{{doctor_page_ip_patient}}</b><p>Piotr Piasecki</p>
+                <h4 class="small font-weight-bold">{{doctor_page_temp_patient}} <span class="float-right">20%</span></h4>
                 <div class="progress progress-sm mb-2">
                     <div class="progress-bar" role="progressbar" style="width: 20%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
-                <h4 class="small font-weight-bold">Puls <span class="float-right">60%</span></h4>
+                <h4 class="small font-weight-bold">{{doctor_page_pulse_patient}} <span class="float-right">60%</span></h4>
                 <div class="progress progress-sm mb-2">
                     <div class="progress-bar  bg-danger" role="progressbar" style="width: 60%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
@@ -167,14 +167,14 @@
         <!-- Project Card Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Dawkowanie</h6>
+                <h6 class="m-0 font-weight-bold text-primary">{{doctor_page_information_dosage}}</h6>
             </div>
             <div class="card-body">
-                <a href="#" class="btn btn-primary btn-icon-split"> <span class="text">Brak tabletek</span></a>
+                <a href="#" class="btn btn-primary btn-icon-split"> <span class="text">{{doctor_page_0_tablets}}</span></a>
                 <hr>
-                <a href="#" class="btn btn-warning btn-icon-split"> <span class="text">Jedna tabletka</span></a>
+                <a href="#" class="btn btn-warning btn-icon-split"> <span class="text">{{doctor_page_1_tablets}}</span></a>
                 <hr>
-                <a href="#" class="btn btn-danger btn-icon-split"><span class="text">Dwie tabletki</span></a>
+                <a href="#" class="btn btn-danger btn-icon-split"><span class="text">{{doctor_page_2_tablets}}</span></a>
             </div>
             <br>
         </div>
@@ -185,7 +185,7 @@
     <div class="col-lg-12">
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Wykres funkcji życiowych</h6>
+                <h6 class="m-0 font-weight-bold text-primary">{{patient_page_graph_of_vital_signs}}</h6>
             </div>
             <div class="card-body">
                 <div class="chart-area">

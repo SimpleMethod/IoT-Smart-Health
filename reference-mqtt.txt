@@ -1,0 +1,24 @@
+var mqtt = new Paho.MQTT.Client("192.168.1.246", 1884, "Smart health Client");
+
+mqtt.onMessageArrived = function(data) {
+  console.log(data.destinationName); // topic
+  console.log(data.payloadString); // message
+}
+
+mqtt.connect({
+    onSuccess: function() {
+        mqtt.subscribe("led");
+    }
+});
+
+$('.ajax-button-on').on('click', function() {
+    data = new Paho.MQTT.Message("ON");
+    data.destinationName = "led";
+    mqtt.send(data);
+});
+$('.ajax-button-off').on('click', function() {
+    data = new Paho.MQTT.Message("OFF");
+    data.destinationName = "led";
+    mqtt.send(data);
+});
+

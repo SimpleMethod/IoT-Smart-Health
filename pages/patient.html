@@ -133,9 +133,21 @@
         }
     });
 
+    var mqtt = new Paho.MQTT.Client("192.168.1.246", 1884, "Smart health Client");
+
+    mqtt.connect({
+        onSuccess: function() {
+            mqtt.subscribe("sensor");
+        }
+    });
+
+    mqtt.onMessageArrived = function(data) {
+        console.log(data.destinationName); // topic
+        console.log(data.payloadString); // message
+    }
 </script>
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Strona pacjenta</h1>
+    <h1 class="h3 mb-0 text-gray-800">{{patient_page_title}}</h1>
 </div>
 <div class="row">
 
@@ -145,7 +157,7 @@
         <!-- Project Card Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Zgłoszone nolegliwości</h6>
+                <h6 class="m-0 font-weight-bold text-primary">{{patient_page_reported_ailments}}</h6>
             </div>
             <div class="card-body">
                 <div class="row">
@@ -156,14 +168,13 @@
                             <tr role="row">
                                 <th class="sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1"
                                     aria-label="Name: activate to sort column descending" style="width: 112px;"
-                                    aria-sort="ascending">Od
+                                    aria-sort="ascending">{{patient_page_from}}
                                 </th>
                                 <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1"
-                                    aria-label="Position: activate to sort column ascending" style="width: 177px;">Do
+                                    aria-label="Position: activate to sort column ascending" style="width: 177px;">{{patient_page_to}}
                                 </th>
                                 <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1"
-                                    aria-label="Office: activate to sort column ascending" style="width: 79px;">Rodzaj
-                                    dolegliwości
+                                    aria-label="Office: activate to sort column ascending" style="width: 79px;">{{patient_page_type_of_ailments}}
                                 </th>
                             </tr>
                             </thead>
@@ -204,7 +215,7 @@
         <!-- Project Card Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Dawki leku</h6>
+                <h6 class="m-0 font-weight-bold text-primary">{{patient_page_a_doses_of_medicines}}</h6>
             </div>
             <div class="card-body">
                 <div class="row">
@@ -215,10 +226,10 @@
                             <tr role="row">
                                 <th class="sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1"
                                     aria-label="Name: activate to sort column descending" style="width: 112px;"
-                                    aria-sort="ascending">Data
+                                    aria-sort="ascending">{{patient_page_date}}
                                 </th>
                                 <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1"
-                                    aria-label="Position: activate to sort column ascending" style="width: 177px;">Dawka leku
+                                    aria-label="Position: activate to sort column ascending" style="width: 177px;">{{patient_page_a_doses_of_medicines}}
                                 </th>
                             </tr>
                             </thead>
@@ -252,7 +263,7 @@
     <div class="col-lg-12">
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Wykres funkcji życiowych</h6>
+            <h6 class="m-0 font-weight-bold text-primary">{{patient_page_graph_of_vital_signs}}</h6>
         </div>
         <div class="card-body">
             <div class="chart-area">

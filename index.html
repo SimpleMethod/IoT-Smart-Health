@@ -8,7 +8,6 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Smart Health</title>
-
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/bootstrap-grid.css">
     <link rel="stylesheet" href="assets/css/bootstrap-reboot.css">
@@ -21,29 +20,27 @@
     <script src="assets/js/bootstrap.js"></script>
     <script src="assets/js/Chart.min.js"></script>
     <script src="assets/js/Chart.bundle.min.js"></script>
+    <script src="assets/js/mqttws31.min.js"></script>
+    <script src="config.js"></script>
+
     <script>
-        var app = angular.module("myApp", ["ngRoute"]);
-        app.config(function($routeProvider) {
-            $routeProvider
 
-                .when("/", {
-                    templateUrl : 'pages/home.html',
-                })
-                .when("/patient", {
-                    templateUrl : 'pages/patient.html',
-                })
-                .when("/doctor", {
-                    templateUrl : 'pages/doctor.html',
-                });
-        });
+        var mqtt = new Paho.MQTT.Client("127.0.0.1",1884,"IOT-ESP");
+        mqtt.onMessageArrived = function (data) {
+            console.log(data.destinationName);
+            console.log(data.payloadString);
+        };
+        mqtt.connect(
+            {
+                onSuccess: function () {
+                    mqtt.subscribe("IOT-ESP");
+                }
+            }
+        )
     </script>
-
-
-
 </head>
-
 <body id="page-top">
-<div id="wrapper">
+<div ng-controller="MultiController" id="wrapper">
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
             <div class="sidebar-brand-icon rotate-n-15">
@@ -55,48 +52,38 @@
         <li class="nav-item active">
             <a class="nav-link" href="#!patient">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
-                <span>Strona pacjenta</span></a>
+                <span>{{bar_patient_page}}</span></a>
         </li>
         <li class="nav-item active">
             <a class="nav-link" href="#!doctor">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
-                <span>Strona lekarza</span></a>
+                <span>{{bar_doctor_page}}</span></a>
         </li>
     </ul>
-
     <div id="content-wrapper" class="d-flex flex-column">
-
         <div id="content">
             <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
                 <ul class="navbar-nav ml-auto">
                     <div class="topbar-divider d-none d-sm-block"></div>
                     <li class="nav-item dropdown no-arrow">
                         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Jan Kowlaski</span>
+                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{doctor_name}}</span>
                         </a>
                     </li>
-
                 </ul>
-
             </nav>
             <div class="container-fluid">
-
                 <div ng-view></div>
             </div>
-
         </div>
-
         <footer class="sticky-footer bg-white">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
-                    <span>Copyright ©M&N 2019</span>
+                    <span>{{footer}}</span>
                 </div>
             </div>
         </footer>
     </div>
 </div>
-
-
-
 </body>
 </html>
