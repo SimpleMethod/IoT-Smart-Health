@@ -28,14 +28,12 @@
         chart.update();
     }
 
-
-    var mqtt = new Paho.MQTT.Client("127.0.0.1",1884,"IOT-ESP");
+    let mqtt = new Paho.MQTT.Client("127.0.0.1",1884,"IOT-ESP");
     mqtt.onMessageArrived = function (data) {
         console.log(data.destinationName);
 
-        var object=data.payloadString;
-        var res = object.replace("'", '"');
-        console.log(res);
+        const object = data.payloadString;
+        console.log(object);
 
         try {
             update(myLineChart,0,90);
@@ -49,7 +47,6 @@
         catch(err) {
             console.log(err.message);
         }
-        
     };
     mqtt.connect(
         {
@@ -57,7 +54,28 @@
                 mqtt.subscribe("IOT-ESP");
             }
         }
-    )
+    );
+
+    //Adding button handling
+    function sendMessage(value) {
+        let message;
+        switch(value) {
+            case 0:
+                message = new Paho.MQTT.Message("0");
+                break;
+            case 1:
+                message = new Paho.MQTT.Message("1");
+                break;
+            case 2:
+                message = new Paho.MQTT.Message("2");
+                break;
+            default:
+                message = new Paho.MQTT.Message("0");
+        }
+        message.destinationName = "WEB-ESP";
+        mqtt.send(message);
+    }
+
 </script>
 </head>
 <body id="page-top">
