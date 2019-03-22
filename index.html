@@ -22,22 +22,43 @@
     <script src="assets/js/Chart.bundle.min.js"></script>
     <script src="assets/js/mqttws31.min.js"></script>
     <script src="config.js"></script>
+<script>
+    function update(chart, label, data) {
+        chart.data.datasets[label].data.push(data);
+        chart.update();
+    }
 
-    <script>
 
-        var mqtt = new Paho.MQTT.Client("127.0.0.1",1884,"IOT-ESP");
-        mqtt.onMessageArrived = function (data) {
-            console.log(data.destinationName);
-            console.log(data.payloadString);
-        };
-        mqtt.connect(
-            {
-                onSuccess: function () {
-                    mqtt.subscribe("IOT-ESP");
-                }
+    var mqtt = new Paho.MQTT.Client("127.0.0.1",1884,"IOT-ESP");
+    mqtt.onMessageArrived = function (data) {
+        console.log(data.destinationName);
+
+        var object=data.payloadString;
+        var res = object.replace("'", '"');
+        console.log(res);
+
+        try {
+            update(myLineChart,0,90);
+        }
+        catch(err) {
+            console.log(err.message);
+        }
+        try {
+            update(myLineChart,1,70);
+        }
+        catch(err) {
+            console.log(err.message);
+        }
+        
+    };
+    mqtt.connect(
+        {
+            onSuccess: function () {
+                mqtt.subscribe("IOT-ESP");
             }
-        )
-    </script>
+        }
+    )
+</script>
 </head>
 <body id="page-top">
 <div ng-controller="MultiController" id="wrapper">
