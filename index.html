@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="myApp">
+<html>
 
 <head>
     <meta charset="utf-8">
@@ -21,65 +21,230 @@
     <script src="assets/js/Chart.min.js"></script>
     <script src="assets/js/Chart.bundle.min.js"></script>
     <script src="assets/js/mqttws31.min.js"></script>
-    <script src="config.js"></script>
-<script>
-    function update(chart, label, data) {
-        chart.data.datasets[label].data.push(data);
-        chart.update();
-    }
+    <script src="app.js"></script>
+    <script>
 
-    let mqtt = new Paho.MQTT.Client("127.0.0.1",1884,"IOT-ESP");
-    mqtt.onMessageArrived = function (data) {
-        console.log(data.destinationName);
+        /**
+         *  TODO: Dodanie obsługi dolegliwości
+         *  TODO: Dodanie obsługi JSON
+         *  TODO: Poprawienie wykresów
+         *  TODO: Problem wydajności <?>
+         */
 
-        const object = data.payloadString;
-        console.log(object);
+        $(document).ready(function () {
+            createDB();
+        });
+        let db = null;
+        let mqtt = new Paho.MQTT.Client("127.0.0.1", 1884, "IOT-ESP");
 
-        try {
-            update(myLineChart,0,90);
-        }
-        catch(err) {
-            console.log(err.message);
-        }
-        try {
-            update(myLineChart,1,70);
-        }
-        catch(err) {
-            console.log(err.message);
-        }
-    };
-    mqtt.connect(
-        {
-            onSuccess: function () {
-                mqtt.subscribe("IOT-ESP");
+
+        /**
+         * Funkcja  pobierająca wszystkie elementy z tabeli health_conditions (dolegliwości) i uzupełnienie ich w tabeli.
+         *
+         */
+        function getAllFromHealthConditions() {
+            const tx = db.transaction("health_conditions", "readonly");
+            const pNotes = tx.objectStore("health_conditions");
+            const request = pNotes.openCursor();
+            request.onsuccess = e => {
+
+                const cursor = e.target.result;
+
+                if (cursor) {
+                    addNewValueAilmentsTable(unixToDate(cursor.value.date), cursor.value.from_problem, cursor.value.to_problem, cursor.value.type_of_disease);
+                    cursor.continue()
+                }
             }
         }
-    );
 
-    //Adding button handling
-    function sendMessage(value) {
-        let message;
-        switch(value) {
-            case 0:
-                message = new Paho.MQTT.Message("0");
-                break;
-            case 1:
-                message = new Paho.MQTT.Message("1");
-                break;
-            case 2:
-                message = new Paho.MQTT.Message("2");
-                break;
-            default:
-                message = new Paho.MQTT.Message("0");
+        /**
+         * Funkcja  pobierająca wszystkie elementy z tabeli dose_drug (historia dawkowania) i uzupełnienie ich w tabeli.
+         *
+         */
+        function getAllFromDose() {
+            const tx = db.transaction("dose_drug", "readonly");
+            const pNotes = tx.objectStore("dose_drug");
+            const request = pNotes.openCursor();
+            request.onsuccess = e => {
+
+                const cursor = e.target.result;
+
+                if (cursor) {
+                    addNewValueDoseTable(unixToDate(cursor.value.date), cursor.value.dose_drug);
+                    cursor.continue()
+                }
+            }
         }
-        message.destinationName = "WEB-ESP";
-        mqtt.send(message);
-    }
 
-</script>
+        /**
+         * Dodanie nowej wartości do tabeli health_conditions.
+         * @param from_p Kiedy wystąpiły objawy.
+         * @param to_p   Kiedy ustąpiły objawy.
+         * @param type_d Jaki rodzaj objawów wystąpił.
+         */
+        function addAilment(from_p, to_p, type_d) {
+            const data = {
+                id: Math.floor(Date.now() / 1000),
+                date: Math.floor(Date.now() / 1000),
+                from_problem: from_p.toString(),
+                to_problem: to_p.toString(),
+                type_of_disease: type_d.toString()
+            };
+            const save = db.transaction("health_conditions", "readwrite");
+            save.onerror = e => console.error(`Błąd: ${e.target.error}`);
+            const temp_data = save.objectStore("health_conditions");
+            temp_data.add(data)
+        }
+
+        /**
+         *  Dodanie nowej wartości do tabeli dose_drug.
+         * @param dose_value  Ilość przepisanych tabletek.
+         */
+        function addDoseDrug(dose_value) {
+            const data = {
+                id: Math.floor(Date.now() / 1000),
+                //id: Math.floor(Date.now() / Math.random()),
+                date: Math.floor(Date.now() / 1000),
+                dose_drug: dose_value
+            };
+            const save = db.transaction("dose_drug", "readwrite");
+            save.onerror = e => console.error(`Błąd: ${e.target.error}`);
+            const temp_data = save.objectStore("dose_drug");
+            temp_data.add(data)
+        }
+
+        /**
+         * Utworzenie bazy danych.
+         */
+        function createDB() {
+            const request = indexedDB.open("sh_db", 1);
+            request.onupgradeneeded = e => {
+                db = e.target.result;
+                const hc = db.createObjectStore("health_conditions", {keyPath: "id"});
+                const dd = db.createObjectStore("dose_drug", {keyPath: "id"});
+                console.warn(`Zaktualizowano bazę: ${db.name} o wersji: ${db.version}`);
+            };
+            request.onsuccess = e => {
+                db = e.target.result;
+                console.log()
+                console.info(`Tworzono bazę danych: ${db.name} o wersji : ${db.version}`);
+            };
+            request.onerror = e => {
+                console.error(`Problem: ${e.target.error}`);
+            }
+        }
+
+        /**
+         * Nowa wartość dodana do wykresu.
+         * @param chart Rodzaj wykresu.
+         * @param label Wybór zbioru danych.
+         * @param data Podana wartość,
+         */
+        function update(chart, label, data) {
+            chart.data.datasets[label].data.push(data);
+            chart.update();
+        }
+
+        /**
+         * Nasłuchwiwanie MQTT i aktualizacja wykresu.
+         * @param data Odebrane dane.
+         */
+        mqtt.onMessageArrived = function (data) {
+            console.log(data.destinationName);
+
+            const object = data.payloadString;
+            console.log(object);
+
+            try {
+                update(myLineChart, 0, 90);
+            } catch (err) {
+                console.log(err.message);
+            }
+            try {
+                update(myLineChart, 1, 70);
+            } catch (err) {
+                console.log(err.message);
+            }
+        };
+
+        /**
+         * Połączenie z MMQTT.
+         */
+        mqtt.connect(
+            {
+                onSuccess: function () {
+                    mqtt.subscribe("IOT-ESP");
+                }
+            }
+        );
+
+
+        /**
+         * Dodanie nowej wartości do tabeli z chorobami.
+         * @param from_p Od kiedy wystąpiły objawy.
+         * @param to_p Do kiedy wystąpiły objawy.
+         * @param type_d  Typ objawów.
+         */
+        function addNewValueAilmentsTable(from_p, to_p, type_d) {
+            var markup = "<tr role=\"row\"><td>" + from_p + "</td><td>" + to_p + "</td><td>" + type_d + "</td></tr>";
+            $("#ailments_table").append(markup);
+        }
+
+        /**
+         *  odanie nowej wartości do tabeli z przepisanymi lekami.
+         * @param date_d Data przepisanych leków.
+         * @param dose_d Wartość przepisanych leków.
+         */
+        function addNewValueDoseTable(date_d, dose_d) {
+            var markup = "<tr role=\"row\"><td>" + date_d + "</td><td>" + dose_d + "</td></tr>";
+            $("#dose_table").append(markup);
+        }
+
+
+        /**
+         *  Wysłanie wiadomości do MQTT
+         * @param value wartość wysłanej wiadomości.
+         */
+        function sendMessage(value) {
+            let message;
+            switch (value) {
+                case 0:
+                    message = new Paho.MQTT.Message("0");
+                    addDoseDrug(0);
+                    break;
+                case 1:
+                    message = new Paho.MQTT.Message("1");
+                    addDoseDrug(1);
+                    break;
+                case 2:
+                    message = new Paho.MQTT.Message("2");
+                    addDoseDrug(2);
+                    break;
+                default:
+                    message = new Paho.MQTT.Message("0");
+                    addDoseDrug(2);
+            }
+            message.destinationName = "WEB-ESP";
+            mqtt.send(message);
+        }
+
+
+        function unixToDate(UNIX_timestamp) {
+            const a = new Date(UNIX_timestamp * 1000);
+            const months = ['STY', 'LUT', 'MAR', 'KWI', 'MAJ', 'CZE', 'SIE', 'WRZ', 'PAZ', 'PAZ', 'LIS', 'GRU'];
+            const year = a.getFullYear();
+            const month = months[a.getMonth()];
+            const date = a.getDate();
+            const hour = a.getHours();
+            const min = a.getMinutes();
+            const sec = a.getSeconds();
+            return date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec;
+        }
+
+    </script>
 </head>
 <body id="page-top">
-<div ng-controller="MultiController" id="wrapper">
+<div ng-app="myApp" ng-controller="MultiController" id="wrapper">
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
             <div class="sidebar-brand-icon rotate-n-15">
@@ -105,7 +270,8 @@
                 <ul class="navbar-nav ml-auto">
                     <div class="topbar-divider d-none d-sm-block"></div>
                     <li class="nav-item dropdown no-arrow">
-                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{doctor_name}}</span>
                         </a>
                     </li>

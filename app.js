@@ -1,22 +1,18 @@
 var app = angular.module("myApp", ["ngRoute"]).controller("MultiController");
+
+
 app.config(function($routeProvider) {
     $routeProvider
-
         .when("/", {
-            templateUrl : 'pages/home.html',
-            controller: 'MultiController'
+            templateUrl : 'pages/home.html'
         })
         .when("/patient", {
-            templateUrl : 'pages/patient.html',
-            controller: 'MultiController'
+            templateUrl : 'pages/patient.html'
         })
         .when("/doctor", {
-            templateUrl : 'pages/doctor.html',
-            controller: 'MultiController'
+            templateUrl : 'pages/doctor.html'
         });
 });
-
-
 
 var PL = {
     "doctor_name": "Jan Noowak",
