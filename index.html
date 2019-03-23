@@ -228,7 +228,11 @@
             mqtt.send(message);
         }
 
-
+        /**
+         * Konwersja timestamp na date.
+         * @param UNIX_timestamp wartość timestamp.
+         * @returns {string} skonwertowana wartość.
+         */
         function unixToDate(UNIX_timestamp) {
             const a = new Date(UNIX_timestamp * 1000);
             const months = ['STY', 'LUT', 'MAR', 'KWI', 'MAJ', 'CZE', 'SIE', 'WRZ', 'PAZ', 'PAZ', 'LIS', 'GRU'];
