@@ -243,6 +243,7 @@
                 const pulse=(a.pulse*100)/360;
                 $('.progress-bar-temp-value').html(a.temp);
                 $('.progress-bar-pulse-value').html(a.pulse);
+                $('.ip-value').html(a.ip);
                 $('.progress-bar-temp').css('width', temp+'%').attr('aria-valuenow', temp);
                 $('.progress-bar-pulse').css('width', pulse+'%').attr('aria-valuenow', pulse);
                 myLineChart.data.labels.push(unixToDate(a.timestamp));

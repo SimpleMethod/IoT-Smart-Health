@@ -15,7 +15,8 @@ app.config(function($routeProvider) {
 });
 
 var PL = {
-    "doctor_name": "Jan Noowak",
+    "patient_template": "Piotr Piasecki",
+    "doctor_name": "Jan Nowak",
     "footer": "Copyright ©M&N 2019",
     "index_main_container": "Projekt interfejsu do projektu Smart Health",
     "index_main_container_samll": "Klient ogólnego przeznaczenia, do zarządzania pacjentem.",
@@ -44,6 +45,7 @@ var PL = {
 
 
 app.controller('MultiController', function ($scope) {
+    $scope.patient_template = PL.patient_template;
     $scope.doctor_name = PL.doctor_name;
     $scope.footer = PL.footer;
     $scope.index_main_container = PL.index_main_container;
