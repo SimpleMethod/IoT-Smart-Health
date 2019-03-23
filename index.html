@@ -267,14 +267,10 @@
 
         function unixToDateSmall(UNIX_timestamp) {
             const a = new Date(UNIX_timestamp * 1000);
-            const months = ['STY', 'LUT', 'MAR', 'KWI', 'MAJ', 'CZE', 'SIE', 'WRZ', 'PAZ', 'PAZ', 'LIS', 'GRU'];
             const year = a.getFullYear();
-            const month = months[a.getMonth()];
+            const month = a.getMonth()+1;
             const date = a.getDate();
-            const hour = a.getHours();
-            const min = a.getMinutes();
-            const sec = a.getSeconds();
-            return date + ' ' + month + ' ' + year;
+            return date + '-' + month + '-' + year;
         }
     </script>
 </head>
