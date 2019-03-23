@@ -1,13 +1,35 @@
 <script>
-    // Set new default font family and font color to mimic Bootstrap's default styling
     Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
     Chart.defaults.global.defaultFontColor = '#858796';
-    // Area Chart Example
+    function number_format(number, decimals, dec_point, thousands_sep) {
+        // *     example: number_format(1234.56, 2, ',', ' ');
+        // *     return: '1 234,56'
+        number = (number + '').replace(',', '').replace(' ', '');
+        var n = !isFinite(+number) ? 0 : +number,
+            prec = !isFinite(+decimals) ? 0 : Math.abs(decimals),
+            sep = (typeof thousands_sep === 'undefined') ? ',' : thousands_sep,
+            dec = (typeof dec_point === 'undefined') ? '.' : dec_point,
+            s = '',
+            toFixedFix = function(n, prec) {
+                var k = Math.pow(10, prec);
+                return '' + Math.round(n * k) / k;
+            };
+        // Fix for IE parseFloat(0.55).toFixed(0) = 0;
+        s = (prec ? toFixedFix(n, prec) : '' + Math.round(n)).split('.');
+        if (s[0].length > 3) {
+            s[0] = s[0].replace(/\B(?=(?:\d{3})+(?!\d))/g, sep);
+        }
+        if ((s[1] || '').length < prec) {
+            s[1] = s[1] || '';
+            s[1] += new Array(prec - s[1].length + 1).join('0');
+        }
+        return s.join(dec);
+    }
+
     var ctx = document.getElementById("myAreaChart");
     var myLineChart = new Chart(ctx, {
         type: 'line',
         data: {
-          //  labels: ["28-02-2019", "01-03-2019", "02-03-2019", "03-03-2019", "04-03-2019", "05-03-2019", "06-03-2019", "07-03-2019", "08-03-2019", "09-03-2019", "10-03-2019", "11-03-2019"],
             datasets: [{
                 label: "temp",
                 lineTension: 0.3,
@@ -65,8 +87,8 @@
                         maxTicksLimit: 5,
                         padding: 10,
                         // Include a dollar sign in the ticks
-                        callback: function(value, index, values) {
-                            return '' + value;
+                        callback: function (value, index, values) {
+                            return '$' + number_format(value);
                         }
                     },
                     gridLines: {
@@ -96,32 +118,29 @@
                 mode: 'index',
                 caretPadding: 10,
                 callbacks: {
-                    label: function(tooltipItem, chart) {
+                    label: function (tooltipItem, chart) {
                         var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
-                        return datasetLabel + ' ' + tooltipItem.yLabel;
+                        return datasetLabel + ': $' + number_format(tooltipItem.yLabel);
                     }
                 }
             }
         }
     });
 
-
-    $(document).ready(function() {
+    /*  W momencie załadowania się dokumentu wykonuje się poniższe opcje */
+    $(document).ready(function () {
+        /*  Uzupełnienie tabeli z ilością dawkowania leków */
         getAllFromDose();
+        /* Uzupełnienie tabeli z historią dolegliwości */
+        getAllFromHealthConditions();
     });
-
-
 </script>
 
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
     <h1 class="h3 mb-0 text-gray-800">{{patient_page_title}}</h1>
 </div>
 <div class="row">
-
-    <!-- Content Column -->
     <div class="col-lg-6 mb-4">
-
-        <!-- Project Card Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
                 <h6 class="m-0 font-weight-bold text-primary">{{patient_page_reported_ailments}}</h6>
@@ -138,10 +157,12 @@
                                     aria-sort="ascending">{{patient_page_from}}
                                 </th>
                                 <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1"
-                                    aria-label="Position: activate to sort column ascending" style="width: 177px;">{{patient_page_to}}
+                                    aria-label="Position: activate to sort column ascending" style="width: 177px;">
+                                    {{patient_page_to}}
                                 </th>
                                 <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1"
-                                    aria-label="Office: activate to sort column ascending" style="width: 79px;">{{patient_page_type_of_ailments}}
+                                    aria-label="Office: activate to sort column ascending" style="width: 79px;">
+                                    {{patient_page_type_of_ailments}}
                                 </th>
                             </tr>
                             </thead>
@@ -155,8 +176,6 @@
     </div>
 
     <div class="col-lg-6 mb-4">
-
-        <!-- Project Card Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
                 <h6 class="m-0 font-weight-bold text-primary">{{patient_page_a_doses_of_medicines}}</h6>
@@ -164,7 +183,8 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col-sm-12">
-                        <table class="table table-bordered dataTable" id="dataTable1" width="100%" cellspacing="0"  role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+                        <table class="table table-bordered dataTable" id="dataTable1" width="100%" cellspacing="0"
+                               role="grid" aria-describedby="dataTable_info" style="width: 100%;">
                             <thead>
                             <tr role="row">
                                 <th class="sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1"
@@ -172,7 +192,8 @@
                                     aria-sort="ascending">{{patient_page_date}}
                                 </th>
                                 <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1"
-                                    aria-label="Position: activate to sort column ascending" style="width: 177px;">{{patient_page_a_doses_of_medicines}}
+                                    aria-label="Position: activate to sort column ascending" style="width: 177px;">
+                                    {{patient_page_a_doses_of_medicines}}
                                 </th>
                             </tr>
                             </thead>
@@ -186,19 +207,16 @@
     </div>
 </div>
 <div class="row">
-
     <div class="col-lg-12">
-    <div class="card shadow mb-4">
-        <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">{{patient_page_graph_of_vital_signs}}</h6>
-        </div>
-        <div class="card-body">
-            <div class="chart-area">
-                <canvas id="myAreaChart"></canvas>
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">{{patient_page_graph_of_vital_signs}}</h6>
+            </div>
+            <div class="card-body">
+                <div class="chart-area">
+                    <canvas id="myAreaChart"></canvas>
+                </div>
             </div>
         </div>
     </div>
-    </div>
-
-
 </div>
