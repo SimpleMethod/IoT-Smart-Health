@@ -159,17 +159,25 @@
             } catch(err) {
                 console.error(err.message);
             }
+            try{
+                myLineChart.data.labels.push(unixToDateSmall(a.timestamp));
+                try {
+                    myLineChart.data.datasets[0].data.push( a.temp);
+                    myLineChart.update();
+                } catch (err) {
+                    console.error(err.message);
+                }
+                try {
+                    myLineChart.data.datasets[1].data.push( a.pulse);
+                    myLineChart.update();
+                } catch (err) {
+                    console.error(err.message);
+                }
+            }
+            catch (e) {
+                console.error(err.message);
+            }
 
-            try {
-                updateChart(myLineChart, 0,unixToDateSmall(a.timestamp), a.temp);
-            } catch (err) {
-                console.error(err.message);
-            }
-            try {
-                updateChart(myLineChart, 1,unixToDateSmall(a.timestamp),  Math.random());
-            } catch (err) {
-                console.error(err.message);
-            }
         };
 
         /**
