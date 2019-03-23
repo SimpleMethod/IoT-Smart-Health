@@ -3,5 +3,9 @@
         "PATH": "/Users/tobynartowski/.platformio/penv/bin:/Users/tobynartowski/.platformio/penv:/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/metasploit-framework/bin:/opt/X11/bin:/Applications/Wireshark.app/Contents/MacOS",
         "PLATFORMIO_CALLER": "vscode"
     },
-    "C_Cpp.errorSquiggles": "Disabled"
+    "C_Cpp.errorSquiggles": "Disabled",
+    "terminal.integrated.env.linux": {
+        "PATH": "/home/toby/.platformio/penv/bin:/home/toby/.platformio/penv:/opt/maven/bin:/usr/local/bin:/usr/bin:/bin:/usr/games",
+        "PLATFORMIO_CALLER": "vscode"
+    }
 }
