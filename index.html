@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="pl">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -41,16 +40,18 @@
          *
          */
         function getAllFromHealthConditions() {
-            const tx = db.transaction("health_conditions", "readonly");
-            const pNotes = tx.objectStore("health_conditions");
-            const request = pNotes.openCursor();
-            request.onsuccess = e => {
-
-                const cursor = e.target.result;
-
-                if (cursor) {
-                    addNewValueAilmentsTable(unixToDate(cursor.value.date), cursor.value.from_problem, cursor.value.to_problem, cursor.value.type_of_disease);
-                    cursor.continue()
+            let dbRequest = indexedDB.open('sh_db',1);
+            dbRequest.onsuccess = function(event) {
+                var db_r = this.result;
+                const tx = db_r.transaction("health_conditions", "readonly");
+                const pNotes = tx.objectStore("health_conditions");
+                const request = pNotes.openCursor();
+                request.onsuccess = e => {
+                    const cursor = e.target.result;
+                    if (cursor) {
+                        addNewValueAilmentsTable(unixToDate(cursor.value.date), cursor.value.from_problem, cursor.value.to_problem, cursor.value.type_of_disease);
+                        cursor.continue()
+                    }
                 }
             }
         }
@@ -60,20 +61,66 @@
          *
          */
         function getAllFromDose() {
-            const tx = db.transaction("dose_drug", "readonly");
-            const pNotes = tx.objectStore("dose_drug");
-            const request = pNotes.openCursor();
-            request.onsuccess = e => {
-
-                const cursor = e.target.result;
-
-                if (cursor) {
-                    addNewValueDoseTable(unixToDate(cursor.value.date), cursor.value.dose_drug);
-                    cursor.continue()
+            let dbRequest = indexedDB.open('sh_db',1);
+            dbRequest.onsuccess = function(event) {
+                var db_r = this.result;
+                const tx = db_r.transaction("dose_drug", "readonly");
+                const pNotes = tx.objectStore("dose_drug");
+                const request = pNotes.openCursor();
+                request.onsuccess = e => {
+                    const cursor = e.target.result;
+                    if (cursor) {
+                        addNewValueDoseTable(unixToDate(cursor.value.date), cursor.value.dose_drug);
+                        cursor.continue()
+                    }
                 }
             }
         }
 
+        /**
+         * Funkcja  pobierająca wszystkie elementy z tabeli dose_drug (historia dawkowania) i uzupełnienie ich w tabeli.
+         *
+         */
+        function getAllFromSignLife() {
+            let dbRequest = indexedDB.open('sh_db',1);
+            dbRequest.onsuccess = function(event) {
+                var db_r = this.result;
+                const tx = db_r.transaction("signs_life", "readonly");
+                const pNotes = tx.objectStore("signs_life");
+                const request = pNotes.openCursor();
+                request.onsuccess = e => {
+                    const cursor = e.target.result;
+                    if (cursor) {
+                        try{
+                            const temp=(cursor.value.temp*100)/50;
+                            const pulse=(cursor.value.pulse*100)/360;
+                            $('.progress-bar-temp-value').html(cursor.value.temp);
+                            $('.progress-bar-pulse-value').html(cursor.value.pulse);
+                            $('.progress-bar-temp').css('width', temp+'%').attr('aria-valuenow', temp);
+                            $('.progress-bar-pulse').css('width', pulse+'%').attr('aria-valuenow', pulse);
+                            myLineChart.data.labels.push(unixToDate(cursor.value.date));
+                            try {
+                                myLineChart.data.datasets[0].data.push(cursor.value.temp);
+                                myLineChart.update();
+                            } catch (err) {
+                                console.error(err.message);
+                            }
+                            try {
+                                myLineChart.data.datasets[1].data.push(cursor.value.pulse);
+                                myLineChart.update();
+                            } catch (err) {
+                                console.error(err.message);
+                            }
+                        }
+                        catch (e) {
+                            console.error(err.message);
+                        }
+                        cursor.continue()
+                    }
+                }
+            }
+
+        }
         /**
          * Dodanie nowej wartości do tabeli health_conditions.
          * @param from_p Kiedy wystąpiły objawy.
@@ -81,17 +128,21 @@
          * @param type_d Jaki rodzaj objawów wystąpił.
          */
         function addAilment(from_p, to_p, type_d) {
-            const data = {
-                id: Math.floor(Date.now() / 1000),
-                date: Math.floor(Date.now() / 1000),
-                from_problem: from_p.toString(),
-                to_problem: to_p.toString(),
-                type_of_disease: type_d.toString()
-            };
-            const save = db.transaction("health_conditions", "readwrite");
-            save.onerror = e => console.error(`Błąd: ${e.target.error}`);
-            const temp_data = save.objectStore("health_conditions");
-            temp_data.add(data)
+            let dbRequest = indexedDB.open('sh_db',1);
+            dbRequest.onsuccess = function(event) {
+                var db_r = this.result;
+                const data = {
+                    id: Math.floor(Date.now() / 1000),
+                    date: Math.floor(Date.now() / 1000),
+                    from_problem: from_p.toString(),
+                    to_problem: to_p.toString(),
+                    type_of_disease: type_d.toString()
+                };
+                const save = db_r.transaction("health_conditions", "readwrite");
+                save.onerror = e => console.error(`Błąd: ${e.target.error}`);
+                const temp_data = save.objectStore("health_conditions");
+                temp_data.add(data)
+            }
         }
 
         /**
@@ -99,16 +150,43 @@
          * @param dose_value  Ilość przepisanych tabletek.
          */
         function addDoseDrug(dose_value) {
-            const data = {
-                id: Math.floor(Date.now() / 1000),
-                //id: Math.floor(Date.now() / Math.random()),
-                date: Math.floor(Date.now() / 1000),
-                dose_drug: dose_value
-            };
-            const save = db.transaction("dose_drug", "readwrite");
-            save.onerror = e => console.error(`Błąd: ${e.target.error}`);
-            const temp_data = save.objectStore("dose_drug");
-            temp_data.add(data)
+            let dbRequest = indexedDB.open('sh_db', 1);
+            dbRequest.onsuccess = function (event) {
+                var db_r = this.result;
+                const data = {
+                    id: Math.floor(Date.now() / 1000),
+                    //id: Math.floor(Date.now() / Math.random()),
+                    date: Math.floor(Date.now() / 1000),
+                    dose_drug: dose_value
+                };
+                const save = db_r.transaction("dose_drug", "readwrite");
+                save.onerror = e => console.error(`Błąd: ${e.target.error}`);
+                const temp_data = save.objectStore("dose_drug");
+                temp_data.add(data)
+            }
+        }
+
+        /**
+         * Dodanie nowych wartości do tabeli signs_life.
+         * @param sl_temp Temperatura.
+         * @param sl_pulse   Puls.
+         * @param sl_time Data pomiaru.
+         */
+        function addSignLife(sl_temp,sl_pulse,sl_time) {
+            let dbRequest = indexedDB.open('sh_db', 1);
+            dbRequest.onsuccess = function (event) {
+                var db_r = this.result;
+                const data = {
+                    id: sl_time,
+                    temp: sl_temp,
+                    pulse: sl_pulse,
+                    date: sl_time
+                };
+                const save = db_r.transaction("signs_life", "readwrite");
+                save.onerror = e => console.error(`Błąd: ${e.target.error}`);
+                const temp_data = save.objectStore("signs_life");
+                temp_data.add(data)
+            }
         }
 
         /**
@@ -120,6 +198,7 @@
                 db = e.target.result;
                 const hc = db.createObjectStore("health_conditions", {keyPath: "id"});
                 const dd = db.createObjectStore("dose_drug", {keyPath: "id"});
+                const sl = db.createObjectStore("signs_life", {keyPath: "id"});
                 console.warn(`Zaktualizowano bazę: ${db.name} o wersji: ${db.version}`);
             };
             request.onsuccess = e => {
@@ -152,23 +231,29 @@
             console.log(data.destinationName);
             let a=null;
             const object = data.payloadString;
-            console.log(object);
             try {
                 a = JSON.parse(object);
                 console.log(a.temp);
             } catch(err) {
                 console.error(err.message);
             }
+            addSignLife(a.temp,a.pulse,a.timestamp);
             try{
-                myLineChart.data.labels.push(unixToDateSmall(a.timestamp));
+                const temp=(a.temp*100)/50;
+                const pulse=(a.pulse*100)/360;
+                $('.progress-bar-temp-value').html(a.temp);
+                $('.progress-bar-pulse-value').html(a.pulse);
+                $('.progress-bar-temp').css('width', temp+'%').attr('aria-valuenow', temp);
+                $('.progress-bar-pulse').css('width', pulse+'%').attr('aria-valuenow', pulse);
+                myLineChart.data.labels.push(unixToDate(a.timestamp));
                 try {
-                    myLineChart.data.datasets[0].data.push( a.temp);
+                    myLineChart.data.datasets[0].data.push(a.temp);
                     myLineChart.update();
                 } catch (err) {
                     console.error(err.message);
                 }
                 try {
-                    myLineChart.data.datasets[1].data.push( a.pulse);
+                    myLineChart.data.datasets[1].data.push(a.pulse);
                     myLineChart.update();
                 } catch (err) {
                     console.error(err.message);
@@ -190,7 +275,6 @@
                 }
             }
         );
-
 
         /**
          * Dodanie nowej wartości do tabeli z chorobami.
@@ -223,8 +307,7 @@
                 default:
 
             }
-
-            var markup = "<tr role=\"row\"><td>" + date_d + "</td><td>" + value + "</td></tr>";
+            const markup = "<tr role=\"row\"><td>" + date_d + "</td><td>" + value + "</td></tr>";
             $("#dose_table").append(markup);
         }
 
@@ -272,7 +355,11 @@
             const sec = a.getSeconds();
             return date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec;
         }
-
+        /**
+         * Konwersja timestamp na dzień, miesiąc i rok.
+         * @param UNIX_timestamp wartość timestamp.
+         * @returns {string} skonwertowana wartość.
+         */
         function unixToDateSmall(UNIX_timestamp) {
             const a = new Date(UNIX_timestamp * 1000);
             const year = a.getFullYear();

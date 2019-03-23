@@ -36,7 +36,7 @@ var PL = {
     "doctor_page_ip_address": "IP:",
     "doctor_page_ip_patient": "Pacjent:",
     "doctor_page_temp_patient": "Temperatura ciała:",
-    "doctor_page_pulse_patient": "Puls:",
+    "doctor_page_pulse_patient": "Tętno:",
     "doctor_page_0_tablets": "Brak tabletek",
     "doctor_page_1_tablets": "Jedna tabletek",
     "doctor_page_2_tablets":"Dwie tabletki"
