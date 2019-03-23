@@ -26,8 +26,6 @@
 
         /**
          *  TODO: Dodanie obsługi dolegliwości
-         *  TODO: Dodanie obsługi JSON
-         *  TODO: Poprawienie wykresów
          *  TODO: Problem wydajności <?>
          */
 
@@ -140,8 +138,9 @@
          * @param label Wybór zbioru danych.
          * @param data Podana wartość,
          */
-        function update(chart, label, data) {
-            chart.data.datasets[label].data.push(data);
+        function updateChart(chart, label, label_data, data) {
+            chart.data.labels.push(label_data);
+            chart.data.datasets[label].data.push( data);
             chart.update();
         }
 
@@ -151,19 +150,25 @@
          */
         mqtt.onMessageArrived = function (data) {
             console.log(data.destinationName);
-
+            let a=null;
             const object = data.payloadString;
             console.log(object);
+            try {
+                a = JSON.parse(object);
+                console.log(a.temp);
+            } catch(err) {
+                console.error(err.message);
+            }
 
             try {
-                update(myLineChart, 0, 90);
+                updateChart(myLineChart, 0,unixToDateSmall(a.timestamp), a.temp);
             } catch (err) {
-                console.log(err.message);
+                console.error(err.message);
             }
             try {
-                update(myLineChart, 1, 70);
+                updateChart(myLineChart, 1,unixToDateSmall(a.timestamp),  Math.random());
             } catch (err) {
-                console.log(err.message);
+                console.error(err.message);
             }
         };
 
@@ -196,7 +201,22 @@
          * @param dose_d Wartość przepisanych leków.
          */
         function addNewValueDoseTable(date_d, dose_d) {
-            var markup = "<tr role=\"row\"><td>" + date_d + "</td><td>" + dose_d + "</td></tr>";
+            let value=null;
+            switch (dose_d) {
+                case 0:
+                    value="Brak tabletek";
+                    break;
+                case 1:
+                    value="Jedna tabletka";
+                    break;
+                case 2:
+                    value="Dwie tabletki";
+                    break;
+                default:
+
+            }
+
+            var markup = "<tr role=\"row\"><td>" + date_d + "</td><td>" + value + "</td></tr>";
             $("#dose_table").append(markup);
         }
 
@@ -245,6 +265,17 @@
             return date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec;
         }
 
+        function unixToDateSmall(UNIX_timestamp) {
+            const a = new Date(UNIX_timestamp * 1000);
+            const months = ['STY', 'LUT', 'MAR', 'KWI', 'MAJ', 'CZE', 'SIE', 'WRZ', 'PAZ', 'PAZ', 'LIS', 'GRU'];
+            const year = a.getFullYear();
+            const month = months[a.getMonth()];
+            const date = a.getDate();
+            const hour = a.getHours();
+            const min = a.getMinutes();
+            const sec = a.getSeconds();
+            return date + ' ' + month + ' ' + year;
+        }
     </script>
 </head>
 <body id="page-top">
