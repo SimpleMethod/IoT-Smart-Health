@@ -106,6 +106,9 @@
     });
 
 
+    $(document).ready(function() {
+        getAllFromDose();
+    });
 
 
 </script>
@@ -142,30 +145,7 @@
                                 </th>
                             </tr>
                             </thead>
-                            <tbody>
-                            <tr role="row" class="">
-                                <td class="">01-01-2019</td>
-                                <td class="">02-01-2019</td>
-                                <td>Choroba 1</td>
-
-                            </tr>
-                            <tr role="row" class="">
-                                <td class="">01-01-2019</td>
-                                <td class="">02-01-2019</td>
-                                <td>Choroba 1</td>
-
-                            </tr>
-                            <tr role="row" class="">
-                                <td class="">01-01-2019</td>
-                                <td class="">02-01-2019</td>
-                                <td>Choroba 1</td>
-
-                            </tr>
-                            <tr role="row" class="">
-                                <td class="">01-01-2019</td>
-                                <td class="">02-01-2019</td>
-                                <td>Choroba 1</td>
-                            </tr>
+                            <tbody id="ailments_table">
                             </tbody>
                         </table>
                     </div>
@@ -183,10 +163,8 @@
             </div>
             <div class="card-body">
                 <div class="row">
-                    <div  ng-controller="myController as inside" class="col-sm-12">
-
-                        <table class="table table-bordered dataTable" id="dataTable1" width="100%" cellspacing="0"
-                               role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+                    <div class="col-sm-12">
+                        <table class="table table-bordered dataTable" id="dataTable1" width="100%" cellspacing="0"  role="grid" aria-describedby="dataTable_info" style="width: 100%;">
                             <thead>
                             <tr role="row">
                                 <th class="sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1"
@@ -198,11 +176,7 @@
                                 </th>
                             </tr>
                             </thead>
-                            <tbody>
-                            <tr role="row" ng-repeat="dose in doseArray">
-                                <td>{{dose.name}}</td>
-                                <td>{{dose.director}}</td>
-                            </tr>
+                            <tbody id="dose_table">
                             </tbody>
                         </table>
                     </div>
