@@ -29,10 +29,6 @@ MQTTClient mqtt;
 typedef enum {NONE, GREEN, ORANGE, RED} LedValue;
 time_t buttons[] = {0, 0, 0};
 
-void messageReceived(String &topic, String &message)
-{
-}
-
 void controlLed(LedValue value)
 {
     digitalWrite(RGB_R, 0);
@@ -52,6 +48,61 @@ void controlLed(LedValue value)
         case RED:
             digitalWrite(RGB_R, 255);
             break;
+    }
+}
+
+void messageReceived(String &topic, String &message)
+{
+    if (topic == "drug") {
+        int number = message.toInt();
+        switch (number) {
+            case 0:
+                controlLed(GREEN);
+                break;
+            case 1:
+                controlLed(ORANGE);
+                break;
+            case 2:
+                controlLed(RED);
+                break;
+            default:
+                controlLed(NONE);
+        }
+    }
+}
+
+void changeButtonState(int button)
+{
+    if (buttons[button] != 0) {
+        // send mqtt
+        Serial.println("Serializing...");
+
+        StaticJsonDocument<200> object;
+        String json;
+
+        object["from"] = buttons[button];
+        object["to"] = time(nullptr);
+        switch (button) {
+            case 0:
+                object["type"] = "Ból głowy";
+                break;
+            case 1:
+                object["type"] = "Ból brzucha";
+                break;
+            case 2:
+                object["type"] = "Ból stawów";
+                break;
+            default:
+                object["type"] = "Nieokreślona";
+        }
+
+        serializeJson(object, json);
+        mqtt.publish("disease", json);
+
+        buttons[button] = 0;
+    } else {
+        buttons[button] = time(nullptr);
+        Serial.println("Not...");
     }
 }
 
@@ -95,44 +146,8 @@ void setup()
     Serial.println(" SUCCESS");
 
     digitalWrite(ESP_LED, LOW);
-    // mqtt.onMessage(messageReceived);
-    // mqtt.subscribe("led");
-}
-
-void changeButtonState(int button)
-{
-    if (buttons[button] != 0) {
-        // send mqtt
-        Serial.println("Serializing...");
-
-        StaticJsonDocument<200> object;
-        String json;
-
-        object["from"] = buttons[button];
-        object["to"] = time(nullptr);
-        switch(button) {
-            case 0:
-                object["type"] = "Ból głowy";
-                break;
-            case 1:
-                object["type"] = "Ból brzucha";
-                break;
-            case 2:
-                object["type"] = "Ból stawów";
-                break;
-            default:
-                object["type"] = "Nieokreślona";
-        }
-
-        serializeJson(object, json);
-        mqtt.publish("disease", json);
-
-        buttons[button] = 0;
-    } else {
-        buttons[button] = time(nullptr);
-        Serial.println("Not...");
-        // turn on diode
-    }
+    mqtt.onMessage(messageReceived);
+    mqtt.subscribe("drug");
 }
 
 void loop()
