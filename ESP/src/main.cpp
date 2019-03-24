@@ -27,6 +27,7 @@ WiFiClient net;
 MQTTClient mqtt;
 
 typedef enum {NONE, GREEN, ORANGE, RED} LedValue;
+time_t buttons[] = {0, 0, 0};
 
 void messageReceived(String &topic, String &message)
 {
@@ -98,17 +99,64 @@ void setup()
     // mqtt.subscribe("led");
 }
 
+void changeButtonState(int button)
+{
+    if (buttons[button] != 0) {
+        // send mqtt
+        Serial.println("Serializing...");
+
+        StaticJsonDocument<200> object;
+        String json;
+
+        object["from"] = buttons[button];
+        object["to"] = time(nullptr);
+        switch(button) {
+            case 0:
+                object["type"] = "Ból głowy";
+                break;
+            case 1:
+                object["type"] = "Ból brzucha";
+                break;
+            case 2:
+                object["type"] = "Ból stawów";
+                break;
+            default:
+                object["type"] = "Nieokreślona";
+        }
+
+        serializeJson(object, json);
+        mqtt.publish("disease", json);
+
+        buttons[button] = 0;
+    } else {
+        buttons[button] = time(nullptr);
+        Serial.println("Not...");
+        // turn on diode
+    }
+}
+
 void loop()
 {
     mqtt.loop();
-    
+
+    // Diseases
+    if (digitalRead(BUTTON_1) == LOW) {
+        changeButtonState(0);
+    }
+    if (digitalRead(BUTTON_2) == LOW) {
+        changeButtonState(1);
+    }
+    if (digitalRead(BUTTON_3) == LOW) {
+        changeButtonState(2);
+    }
+
     // Temperature and pulse
     StaticJsonDocument<200> object;
     String json;
     time_t now = time(nullptr);
     
     object["ip"] = WiFi.localIP().toString();
-    object["temp"] = (rand() % 3) + 35;
+    object["temp"] = CELSIUS(analogRead(A0));
     object["pulse"] = (rand() % 30) + 70;
     object["date"] = now;
 

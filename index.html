@@ -224,7 +224,7 @@
         }
 
         /**
-         * Nasłuchwiwanie MQTT i aktualizacja wykresu.
+         * Nasłuchwiwanie MQTT, aktualizacja wykresu i dolegliwości.
          * @param data Odebrane dane.
          */
         mqtt.onMessageArrived = function (data) {
@@ -233,37 +233,38 @@
             const object = data.payloadString;
             try {
                 a = JSON.parse(object);
-                console.log(a.temp);
-                console.log(a.pulse);
-                console.log(a.date);
             } catch(err) {
                 console.error(err.message);
             }
-            addSignLife(a.temp,a.pulse,a.timestamp);
-            try{
-                const temp=(a.temp*100)/50;
-                const pulse=(a.pulse*100)/360;
-                $('.progress-bar-temp-value').html(a.temp);
-                $('.progress-bar-pulse-value').html(a.pulse);
-                $('.ip-value').html(a.ip);
-                $('.progress-bar-temp').css('width', temp+'%').attr('aria-valuenow', temp);
-                $('.progress-bar-pulse').css('width', pulse+'%').attr('aria-valuenow', pulse);
-                myLineChart.data.labels.push(unixToDate(a.date));
-                try {
-                    myLineChart.data.datasets[0].data.push(a.temp);
-                    myLineChart.update();
-                } catch (err) {
+
+            if (data.destinationName === "disease") {
+                addNewValueAilmentsTable(unixToDate(a.from), unixToDate(a.to), a.type);
+            } else {
+                addSignLife(a.temp,a.pulse,a.timestamp);
+                try{
+                    const temp=(a.temp*100)/50;
+                    const pulse=(a.pulse*100)/360;
+                    $('.progress-bar-temp-value').html(a.temp);
+                    $('.progress-bar-pulse-value').html(a.pulse);
+                    $('.ip-value').html(a.ip);
+                    $('.progress-bar-temp').css('width', temp+'%').attr('aria-valuenow', temp);
+                    $('.progress-bar-pulse').css('width', pulse+'%').attr('aria-valuenow', pulse);
+                    myLineChart.data.labels.push(unixToDate(a.date));
+                    try {
+                        myLineChart.data.datasets[0].data.push(a.temp);
+                        myLineChart.update();
+                    } catch (err) {
+                        console.error(err.message);
+                    }
+                    try {
+                        myLineChart.data.datasets[1].data.push(a.pulse);
+                        myLineChart.update();
+                    } catch (err) {
+                        console.error(err.message);
+                    }
+                } catch (e) {
                     console.error(err.message);
                 }
-                try {
-                    myLineChart.data.datasets[1].data.push(a.pulse);
-                    myLineChart.update();
-                } catch (err) {
-                    console.error(err.message);
-                }
-            }
-            catch (e) {
-                console.error(err.message);
             }
         };
 
@@ -273,6 +274,7 @@
         mqtt.connect({
                 onSuccess: function () {
                     mqtt.subscribe("sensor");
+                    mqtt.subscribe("disease");
                 }
             }
         );
