@@ -239,6 +239,7 @@
 
             if (data.destinationName === "disease") {
                 addNewValueAilmentsTable(unixToDate(a.from), unixToDate(a.to), a.type);
+                addAilment(unixToDate(a.from), unixToDate(a.to), a.type);
             } else {
                 addSignLife(a.temp,a.pulse,a.timestamp);
                 try{
