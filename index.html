@@ -23,10 +23,6 @@
     <script src="app.js"></script>
     <script>
 
-        /**
-         *  TODO: Dodanie obsługi dolegliwości
-         *  TODO: Problem wydajności <?>
-         */
 
         $(document).ready(function () {
             createDB();
@@ -241,7 +237,7 @@
                 addNewValueAilmentsTable(unixToDate(a.from), unixToDate(a.to), a.type);
                 addAilment(unixToDate(a.from), unixToDate(a.to), a.type);
             } else {
-                addSignLife(a.temp,a.pulse,a.timestamp);
+                //addSignLife(a.temp,a.pulse,a.timestamp);
                 try{
                     const temp=(a.temp*100)/50;
                     const pulse=(a.pulse*100)/360;
