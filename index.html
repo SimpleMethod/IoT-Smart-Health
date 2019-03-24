@@ -237,7 +237,7 @@
                 addNewValueAilmentsTable(unixToDate(a.from), unixToDate(a.to), a.type);
                 addAilment(unixToDate(a.from), unixToDate(a.to), a.type);
             } else {
-                //addSignLife(a.temp,a.pulse,a.timestamp);
+                addSignLife(a.temp,a.pulse,a.date);
                 try{
                     const temp=(a.temp*100)/50;
                     const pulse=(a.pulse*100)/360;
