@@ -16,9 +16,9 @@ app.config(function($routeProvider) {
 
 var PL = {
     "patient_template": "Piotr Piasecki",
-    "doctor_name": "Jan Nowak",
+    "doctor_name": "dr Jan Nowak",
     "footer": "Copyright ©M&N 2019",
-    "index_main_container": "Projekt interfejsu do projektu Smart Health",
+    "index_main_container": "Projekt Smart Health",
     "index_main_container_samll": "Klient ogólnego przeznaczenia, do zarządzania pacjentem.",
     "bar_patient_page": "Strona pacjenta",
     "bar_doctor_page": "Strona lekarza",
@@ -42,7 +42,6 @@ var PL = {
     "doctor_page_1_tablets": "Jedna tabletek",
     "doctor_page_2_tablets":"Dwie tabletki"
 };
-
 
 app.controller('MultiController', function ($scope) {
     $scope.patient_template = PL.patient_template;
