@@ -45,7 +45,7 @@
                 request.onsuccess = e => {
                     const cursor = e.target.result;
                     if (cursor) {
-                        addNewValueAilmentsTable(unixToDate(cursor.value.date), cursor.value.from_problem, cursor.value.to_problem, cursor.value.type_of_disease);
+                        addNewValueAilmentsTable(cursor.value.from_problem, cursor.value.to_problem, cursor.value.type_of_disease);
                         cursor.continue()
                     }
                 }
@@ -335,7 +335,7 @@
                     message = new Paho.MQTT.Message("0");
                     addDoseDrug(2);
             }
-            message.destinationName = "WEB-ESP";
+            message.destinationName = "drug";
             mqtt.send(message);
         }
 
