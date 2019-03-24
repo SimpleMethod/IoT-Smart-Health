@@ -8,7 +8,8 @@
 //------------------------------------------------
 const char *ssid = "NETGEAR2";
 const char *password = "8bioniCl32";
-const char *mqttAddress = "192.168.0.106";
+const char *mqttAddress = "broker.mqttdashboard.com";
+int mqttPort = 1883;
 
 #define ESP_LED LED_BUILTIN
 #define BUTTON_1 D4
@@ -85,7 +86,7 @@ void setup()
 
     // MQTT
     Serial.print("\nConnecting to MQTT ...");
-    mqtt.begin(mqttAddress, net);
+    mqtt.begin(mqttAddress, mqttPort, net);
     while (!mqtt.connect("SmartHealth")) {
         delay(500);
         Serial.print(".");
@@ -99,7 +100,6 @@ void setup()
 
 void loop()
 {
-    /*
     mqtt.loop();
     
     // Temperature and pulse
@@ -107,6 +107,7 @@ void loop()
     String json;
     time_t now = time(nullptr);
     
+    object["ip"] = WiFi.localIP().toString();
     object["temp"] = (rand() % 3) + 35;
     object["pulse"] = (rand() % 30) + 70;
     object["date"] = now;
@@ -115,6 +116,5 @@ void loop()
     mqtt.publish("sensor", json);
 
     // TODO: przerwanie na timerze
-    delay(1000); 
-    */
+    delay(1000);
 }

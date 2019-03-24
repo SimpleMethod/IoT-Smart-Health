@@ -32,7 +32,7 @@
             createDB();
         });
         let db = null;
-        let mqtt = new Paho.MQTT.Client("127.0.0.1", 1884, "IOT-ESP");
+        let mqtt = new Paho.MQTT.Client("broker.mqttdashboard.com", 8000, "Smart-Health-Client");
 
 
         /**
@@ -234,6 +234,8 @@
             try {
                 a = JSON.parse(object);
                 console.log(a.temp);
+                console.log(a.pulse);
+                console.log(a.date);
             } catch(err) {
                 console.error(err.message);
             }
@@ -246,7 +248,7 @@
                 $('.ip-value').html(a.ip);
                 $('.progress-bar-temp').css('width', temp+'%').attr('aria-valuenow', temp);
                 $('.progress-bar-pulse').css('width', pulse+'%').attr('aria-valuenow', pulse);
-                myLineChart.data.labels.push(unixToDate(a.timestamp));
+                myLineChart.data.labels.push(unixToDate(a.date));
                 try {
                     myLineChart.data.datasets[0].data.push(a.temp);
                     myLineChart.update();
@@ -263,16 +265,14 @@
             catch (e) {
                 console.error(err.message);
             }
-
         };
 
         /**
          * Połączenie z MMQTT.
          */
-        mqtt.connect(
-            {
+        mqtt.connect({
                 onSuccess: function () {
-                    mqtt.subscribe("IOT-ESP");
+                    mqtt.subscribe("sensor");
                 }
             }
         );
