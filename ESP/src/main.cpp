@@ -16,9 +16,10 @@ int mqttPort = 1883;
 #define BUTTON_2 D3
 #define BUTTON_3 D1
 #define TEMP_SENSOR A0
-#define RGB_R D7
-#define RGB_G D6
-#define RGB_B D5
+
+#define REG_LATCH D7
+#define REG_CLOCK D6
+#define REG_DATA D8
 //------------------------------------------------
 
 #define CELSIUS(x) (((x / 1024.0) * 3300) / 10)
@@ -26,29 +27,24 @@ int mqttPort = 1883;
 WiFiClient net;
 MQTTClient mqtt;
 
-typedef enum {NONE, GREEN, ORANGE, RED} LedValue;
+typedef enum {NONE = -1, GREEN, ORANGE, RED} LedValue;
 time_t buttons[] = {0, 0, 0};
+byte data = 0;
+
+void shiftRegister(int bit)
+{
+    digitalWrite(REG_LATCH, LOW);
+    if (bit < 0) {
+        shiftOut(REG_DATA, REG_CLOCK, LSBFIRST, 0);
+    } else {
+        shiftOut(REG_DATA, REG_CLOCK, LSBFIRST, 1 << bit);
+    }
+    digitalWrite(REG_LATCH, HIGH);
+}
 
 void controlLed(LedValue value)
 {
-    digitalWrite(RGB_R, 0);
-    digitalWrite(RGB_G, 0);
-    digitalWrite(RGB_B, 0);
-
-    switch (value) {
-        case NONE:
-            break;
-        case GREEN:
-            digitalWrite(RGB_G, 255);
-            break;
-        case ORANGE:
-            digitalWrite(RGB_R, 255);
-            digitalWrite(RGB_G, 128);
-            break;
-        case RED:
-            digitalWrite(RGB_R, 255);
-            break;
-    }
+    shiftRegister(value);
 }
 
 void messageReceived(String &topic, String &message)
@@ -112,9 +108,9 @@ void setup()
     pinMode(BUTTON_1, INPUT_PULLUP);
     pinMode(BUTTON_2, INPUT_PULLUP);
     pinMode(BUTTON_3, INPUT_PULLUP);
-    pinMode(RGB_R, OUTPUT);
-    pinMode(RGB_G, OUTPUT);
-    pinMode(RGB_B, OUTPUT);
+    pinMode(REG_LATCH, OUTPUT);
+    pinMode(REG_CLOCK, OUTPUT);
+    pinMode(REG_DATA, OUTPUT);
 
     Serial.begin(115200);
     digitalWrite(ESP_LED, HIGH);
