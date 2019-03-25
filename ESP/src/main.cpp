@@ -28,23 +28,47 @@ WiFiClient net;
 MQTTClient mqtt;
 
 typedef enum {NONE = -1, GREEN, ORANGE, RED} LedValue;
+typedef enum {DISEASE_3 = 4, DISEASE_2, DISEASE_1} DiseaseValue;
 time_t buttons[] = {0, 0, 0};
-byte data = 0;
+byte registerData = 0;
 
-void shiftRegister(int bit)
+void updateRegister()
 {
     digitalWrite(REG_LATCH, LOW);
-    if (bit < 0) {
-        shiftOut(REG_DATA, REG_CLOCK, LSBFIRST, 0);
-    } else {
-        shiftOut(REG_DATA, REG_CLOCK, LSBFIRST, 1 << bit);
-    }
+    shiftOut(REG_DATA, REG_CLOCK, LSBFIRST, registerData);
     digitalWrite(REG_LATCH, HIGH);
+}
+
+void clearRegister()
+{
+    registerData = 0;
+    updateRegister();
+}
+
+void clearDiseaseRegister()
+{
+    bitClear(registerData, GREEN);
+    bitClear(registerData, ORANGE);
+    bitClear(registerData, RED);
+    updateRegister();
+}
+
+void registerBitHigh(int bit)
+{
+    bitSet(registerData, bit);
+    updateRegister();
+}
+
+void registerBitLow(int bit)
+{
+    bitClear(registerData, bit);
+    updateRegister();
 }
 
 void controlLed(LedValue value)
 {
-    shiftRegister(value);
+    clearDiseaseRegister();
+    registerBitHigh(value);
 }
 
 void messageReceived(String &topic, String &message)
@@ -70,9 +94,6 @@ void messageReceived(String &topic, String &message)
 void changeButtonState(int button)
 {
     if (buttons[button] != 0) {
-        // send mqtt
-        Serial.println("Serializing...");
-
         StaticJsonDocument<200> object;
         String json;
 
@@ -81,12 +102,15 @@ void changeButtonState(int button)
         switch (button) {
             case 0:
                 object["type"] = "Ból głowy";
+                registerBitLow(DISEASE_1);
                 break;
             case 1:
                 object["type"] = "Ból brzucha";
+                registerBitLow(DISEASE_2);
                 break;
             case 2:
                 object["type"] = "Ból stawów";
+                registerBitLow(DISEASE_3);
                 break;
             default:
                 object["type"] = "Nieokreślona";
@@ -98,7 +122,17 @@ void changeButtonState(int button)
         buttons[button] = 0;
     } else {
         buttons[button] = time(nullptr);
-        Serial.println("Not...");
+        switch(button) {
+            case 0:
+                registerBitHigh(DISEASE_1);
+                break;
+            case 1:
+                registerBitHigh(DISEASE_2);
+                break;
+            case 2:
+                registerBitHigh(DISEASE_3);
+                break;
+        }
     }
 }
 
@@ -144,6 +178,8 @@ void setup()
     digitalWrite(ESP_LED, LOW);
     mqtt.onMessage(messageReceived);
     mqtt.subscribe("drug");
+
+    clearRegister();
 }
 
 void loop()
@@ -174,6 +210,5 @@ void loop()
     serializeJson(object, json);
     mqtt.publish("sensor", json);
 
-    // TODO: przerwanie na timerze
     delay(1000);
 }
