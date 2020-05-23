@@ -12,7 +12,7 @@ Web interface to the IoT Smart Health application.
 4. Report the side effects of drugs using device,
 5. Communication via MQTT protocol.
 
-# Used technologies:
+# 📖 Used technologies:
  - Bootstrap,
  - jQuery,
  - Highcharts,
